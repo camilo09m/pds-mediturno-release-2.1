@@ -1,0 +1,78 @@
+name: Pipeline · capa 1 · smoke
+
+# ============================================================================
+#  ESTE ARCHIVO ES UN EJEMPLO. ES LA PRIMERA DE LAS CUATRO CAPAS QUE PIDE LA
+#  PARTE B DE LA ENTREGA 3. LAS OTRAS TRES LAS ESCRIBE EL EQUIPO.
+# ============================================================================
+#
+#  El escalonamiento que pide el enunciado:
+#
+#    capa 1 · smoke                  en cada push              < 3 minutos   ← esta
+#    capa 2 · regresión seleccionada en cada pull request      < 10 minutos
+#    capa 3 · regresión completa     todas las noches          sin tope
+#    capa 4 · regresión extendida    antes de cada release     sin tope
+#
+#  Lo que hay que resolver en cada una, y que acá está resuelto solo para la primera:
+#
+#    · qué la dispara            (on:)
+#    · qué subconjunto ejecuta   (perfiles de Maven, etiquetas de JUnit, o la salida
+#                                 del análisis de impacto)
+#    · en cuánto tiempo cabe     (timeout-minutes, y que sea real, no aspiracional)
+#    · qué la hace fallar        (umbrales de cobertura, pruebas en cuarentena,
+#                                 pruebas inestables)
+#    · qué evidencia deja        (artefactos, informes, resumen del job)
+#
+#  La capa 1 no busca defectos: busca respuesta rápida. Si tarda más de tres minutos,
+#  deja de cumplir su función y la gente empieza a integrar sin esperarla.
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: smoke-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+
+  smoke:
+    name: Smoke
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalar JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: "17"
+          distribution: temurin
+          cache: maven
+
+      - name: Compilar y correr solo las pruebas rápidas
+        run: mvn -B -ntp -Prapido clean verify
+
+      - name: Resumen
+        if: always()
+        run: |
+          {
+            echo "### Capa 1 · smoke"
+            echo
+            echo "Perfil \`rapido\`: compila los cinco módulos y ejecuta las pruebas"
+            echo "unitarias. No levanta contenedores."
+            echo
+            echo "Las capas 2, 3 y 4 son entregable de la Parte B."
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Guardar los informes
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: informes-smoke
+          path: "**/target/surefire-reports/**"
+          if-no-files-found: warn
+          retention-days: 7

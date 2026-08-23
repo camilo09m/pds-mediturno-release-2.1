@@ -64,7 +64,27 @@ mvn -B -pl ms-reservas spring-boot:run -Dspring-boot.run.profiles=efimero
 **Este es el perfil en el que siguen corriendo, sin cambios, las suites de las entregas 1 y
 2.** Si una prueba suya deja de pasar en `efimero`, no es por la infraestructura nueva.
 
-### 2.3 Compilar y probar
+### 2.3 Verificar que el ambiente quedó bien
+
+```bash
+bash verificar-ambiente.sh
+```
+
+Revisa una por una las piezas —herramientas, contenedores, PostgreSQL, Redis, los seis
+topics, los cinco servicios, los dos dobles externos y las conexiones entre ellos— y deja
+una lista de resultados. Devuelve 0 si todo está en verde.
+
+No prueba ninguna regla de negocio. Sirve para lo otro: cuando algo falle, poder distinguir
+*"el ambiente está mal"* de *"el sistema está mal"*, que es una distinción que sale cara
+descubrir tarde.
+
+Lo mismo, pero desde Java y con contenedores efímeros, está en las pruebas de plomería:
+
+```bash
+mvn -B -pl ms-reservas verify -Dit.test='*RespondeIT,ContextoLevantaIT'
+```
+
+### 2.4 Compilar y probar
 
 ```bash
 mvn -B clean verify              # todo: compila, pruebas rápidas y de integración
@@ -202,7 +222,19 @@ El código es estable y forma parte del contrato. El mensaje es informativo y pu
 
 ---
 
-## 8. Qué no se modifica
+## 8. Integración continua
+
+El repositorio trae dos flujos de GitHub Actions:
+
+| Archivo | De quién es | Qué hace |
+|---|---|---|
+| `.github/workflows/verificacion.yml` | del docente | Compila, corre todas las pruebas y levanta el ambiente completo para verificarse a sí mismo |
+| `.github/workflows/pipeline-capa-1-smoke.yml` | ejemplo | La primera de las cuatro capas del pipeline que pide la Parte B |
+
+**La capa 1 viene hecha; las capas 2, 3 y 4 son entregable del equipo.** El archivo de
+ejemplo está comentado con lo que hay que resolver en cada capa.
+
+## 9. Qué no se modifica
 
 El repositorio base es el objeto de prueba. Cambiarlo para que una prueba pase invierte el
 ejercicio.
@@ -224,14 +256,16 @@ corregido en silencio no se puede evaluar.
 
 ---
 
-## 9. Estructura
+## 10. Estructura
 
 ```
 mediturno-release-2.1/
 ├── pom.xml                     agregador de los cinco módulos
 ├── docker-compose.yml          ambiente completo
 ├── Dockerfile                  imagen común; el módulo lo elige el argumento SERVICIO
+├── verificar-ambiente.sh       lista de comprobación del ambiente completo
 ├── datos/convenios.csv         padrón de convenios de empresa (RN-TAR-08)
+├── .github/workflows/          verificación del repositorio y capa 1 del pipeline
 ├── infra/
 │   ├── postgres/init.sql       una base por servicio
 │   ├── kafka/crear-topics.sh   los topics se crean acá, no por accidente
@@ -245,7 +279,7 @@ mediturno-release-2.1/
 
 ---
 
-## 10. Antes de empezar
+## 11. Antes de empezar
 
 Verifique su ambiente siguiendo el **Anexo C de la Guía del Estudiante**, y deje la evidencia
 por integrante en el Checkpoint 1. Media entrega se pierde en problemas de instalación que se

@@ -1,0 +1,97 @@
+name: Verificación del repositorio base
+
+# Este flujo es del docente, no de los equipos. Su único trabajo es responder una
+# pregunta antes de publicar el repositorio: ¿esto compila, pasa sus propias pruebas y
+# levanta completo en una máquina limpia?
+#
+# Se ejecuta en un runner Linux de GitHub, que trae Docker instalado. Por eso no hace
+# falta tener un ambiente local para verificar el ambiente.
+
+on:
+  push:
+    branches: [main, "release-2.1-*"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: verificacion-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+
+  compilacion-y-pruebas:
+    name: Compila y pasa sus pruebas
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalar JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: "17"
+          distribution: temurin
+          cache: maven
+
+      - name: Compilar los cinco módulos
+        run: mvn -B -ntp clean compile
+
+      - name: Pruebas rápidas
+        run: mvn -B -ntp -Prapido verify
+
+      - name: Pruebas de integración con Testcontainers
+        run: mvn -B -ntp verify
+
+      - name: Guardar los informes
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: informes-de-pruebas
+          path: |
+            **/target/surefire-reports/**
+            **/target/failsafe-reports/**
+            **/target/site/jacoco/**
+          if-no-files-found: warn
+          retention-days: 14
+
+  ambiente-completo:
+    name: Levanta completo y se verifica a sí mismo
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Levantar el ambiente
+        run: docker compose up -d --build
+
+      - name: Esperar y verificar
+        run: |
+          # Los servicios demoran en quedar healthy la primera vez. Se reintenta la
+          # verificación completa en vez de dormir una cantidad fija de segundos.
+          for intento in $(seq 1 20); do
+            echo "::group::Verificación, intento $intento"
+            if bash verificar-ambiente.sh; then
+              echo "::endgroup::"
+              echo "El ambiente quedó completo en el intento $intento."
+              exit 0
+            fi
+            echo "::endgroup::"
+            sleep 15
+          done
+          echo "El ambiente no llegó a estar completo."
+          exit 1
+
+      - name: Registros de los contenedores, si algo falló
+        if: failure()
+        run: |
+          docker compose ps
+          docker compose logs --tail 200
+
+      - name: Bajar el ambiente
+        if: always()
+        run: docker compose down -v
