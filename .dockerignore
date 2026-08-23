@@ -1,0 +1,6 @@
+.git
+**/target
+**/*.iml
+.idea
+allure-results
+docs/salida

@@ -1,0 +1,32 @@
+server:
+  port: ${SERVER_PORT:8081}
+
+spring:
+  application:
+    name: ms-tarificacion
+  mvc:
+    problemdetails:
+      enabled: false
+
+mediturno:
+  convenios:
+    # Padrón de convenios de empresa (RN-TAR-08). Si el archivo no existe en esta
+    # ruta se usa la copia empaquetada en el classpath.
+    archivo: ${MEDITURNO_CONVENIOS_ARCHIVO:datos/convenios.csv}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always
+      probes:
+        enabled: true
+
+springdoc:
+  swagger-ui:
+    path: /swagger
+  api-docs:
+    path: /api-docs

@@ -1,0 +1,41 @@
+{
+  "mappings": [
+    {
+      "priority": 1,
+      "request": { "method": "GET", "url": "/prevision/99.999.999-9" },
+      "response": {
+        "status": 404,
+        "headers": { "Content-Type": "application/json" },
+        "jsonBody": { "error": "NO_AFILIADO", "mensaje": "El RUT no figura como afiliado." }
+      }
+    },
+    {
+      "priority": 1,
+      "request": { "method": "GET", "url": "/prevision/98.888.888-8" },
+      "response": {
+        "status": 429,
+        "headers": { "Content-Type": "application/json", "Retry-After": "60" },
+        "jsonBody": { "error": "CUOTA", "mensaje": "Cuota de consultas agotada." }
+      }
+    },
+    {
+      "priority": 1,
+      "request": { "method": "GET", "url": "/prevision/97.777.777-7" },
+      "response": {
+        "status": 503,
+        "headers": { "Content-Type": "application/json" },
+        "jsonBody": { "error": "NO_DISPONIBLE", "mensaje": "Servicio en mantención." }
+      }
+    },
+    {
+      "priority": 1,
+      "request": { "method": "GET", "url": "/prevision/96.666.666-6" },
+      "response": {
+        "status": 200,
+        "headers": { "Content-Type": "application/json" },
+        "jsonBody": { "rut": "96.666.666-6", "afiliado": true, "prevision": "FONASA", "tramo": "B" },
+        "fixedDelayMilliseconds": 3100
+      }
+    }
+  ]
+}

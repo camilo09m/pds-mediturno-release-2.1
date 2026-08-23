@@ -1,0 +1,11 @@
+# Perfil sin contenedores: base en memoria, cada arranque parte de cero.
+#   mvn -pl ms-pacientes spring-boot:run -Dspring-boot.run.profiles=efimero
+spring:
+  datasource:
+    url: jdbc:h2:mem:pacientes;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+  jpa:
+    hibernate:
+      ddl-auto: create-drop

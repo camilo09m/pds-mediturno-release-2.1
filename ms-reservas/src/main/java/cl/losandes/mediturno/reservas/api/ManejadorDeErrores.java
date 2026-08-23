@@ -1,6 +1,7 @@
 package cl.losandes.mediturno.reservas.api;
 
 import cl.losandes.mediturno.reservas.dominio.ReglaNegocioException;
+import cl.losandes.mediturno.reservas.infraestructura.clientes.ServicioNoDisponibleException;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -42,7 +43,9 @@ public class ManejadorDeErrores {
             Map.entry("PAC-404", HttpStatus.NOT_FOUND),
             Map.entry("PAC-DUPLICADO", HttpStatus.CONFLICT),
             Map.entry("VAL-ENUM", HttpStatus.BAD_REQUEST),
-            Map.entry("VAL-TRAMO", HttpStatus.BAD_REQUEST));
+            Map.entry("VAL-TRAMO", HttpStatus.BAD_REQUEST),
+            // Release 2.1 — la previsión declarada se contrasta con un servicio externo.
+            Map.entry("PREV-NO-AFILIADO", HttpStatus.UNPROCESSABLE_ENTITY));
 
     @ExceptionHandler(ReglaNegocioException.class)
     public ResponseEntity<ErrorResponse> regla(ReglaNegocioException e, HttpServletRequest req) {
@@ -64,6 +67,28 @@ public class ManejadorDeErrores {
                                                         HttpServletRequest req) {
         return construir("VAL-JSON", "El cuerpo de la petición no es un JSON válido o "
                 + "algún campo tiene un tipo incorrecto.", HttpStatus.BAD_REQUEST, req);
+    }
+
+    /**
+     * Release 2.1 — un servicio del que ms-reservas depende no respondió.
+     *
+     * <p>Responde 503 con {@code Retry-After}: es una falla transitoria de la
+     * plataforma, no un error de la petición, y el cliente puede reintentar. El código
+     * identifica cuál servicio cayó, porque un integrador necesita saberlo.</p>
+     */
+    @ExceptionHandler(ServicioNoDisponibleException.class)
+    public ResponseEntity<ErrorResponse> servicioCaido(ServicioNoDisponibleException e,
+                                                       HttpServletRequest req) {
+        String codigo = switch (e.servicio()) {
+            case "ms-tarificacion" -> "TAR-NO-DISPONIBLE";
+            case "ms-pacientes" -> "PAC-NO-DISPONIBLE";
+            default -> "DEP-NO-DISPONIBLE";
+        };
+        return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE)
+                .header("Retry-After", "5")
+                .body(new ErrorResponse(codigo, e.getMessage(),
+                        HttpStatus.SERVICE_UNAVAILABLE.value(), req.getRequestURI(),
+                        LocalDateTime.now()));
     }
 
     private ResponseEntity<ErrorResponse> construir(String codigo, String mensaje,

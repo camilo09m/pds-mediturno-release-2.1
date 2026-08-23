@@ -1,0 +1,17 @@
+{
+  "priority": 10,
+  "request": { "method": "GET", "urlPathPattern": "/prevision/.*" },
+  "response": {
+    "status": 200,
+    "headers": { "Content-Type": "application/json" },
+    "jsonBody": {
+      "rut": "{{request.pathSegments.[1]}}",
+      "afiliado": true,
+      "prevision": "FONASA",
+      "tramo": "B",
+      "vigenteHasta": "2027-12-31"
+    },
+    "transformers": ["response-template"],
+    "fixedDelayMilliseconds": 120
+  }
+}

@@ -43,6 +43,12 @@ public class RepositorioReservasJpa implements RepositorioReservas {
     }
 
     @Override
+    public List<Reserva> enBloqueParaActualizar(LocalDateTime fechaHora, Especialidad especialidad) {
+        return jpa.bloquearBloque(fechaHora, especialidad.name()).stream()
+                .map(Mapeador::aDominio).toList();
+    }
+
+    @Override
     public List<Reserva> todas() {
         return jpa.findAllByOrderByFechaHoraAtencionAsc().stream().map(Mapeador::aDominio).toList();
     }

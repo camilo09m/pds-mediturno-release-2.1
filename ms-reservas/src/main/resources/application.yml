@@ -1,14 +1,14 @@
 server:
-  port: 8082
+  port: ${SERVER_PORT:8082}
 
 spring:
   application:
     name: ms-reservas
+
   datasource:
-    url: jdbc:h2:file:./datos/mediturno-reservas;DB_CLOSE_DELAY=-1
-    driver-class-name: org.h2.Driver
-    username: sa
-    password: ""
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/mediturno_reservas}
+    username: ${SPRING_DATASOURCE_USERNAME:mediturno}
+    password: ${SPRING_DATASOURCE_PASSWORD:mediturno}
   jpa:
     hibernate:
       ddl-auto: update
@@ -16,10 +16,42 @@ spring:
     properties:
       hibernate:
         format_sql: false
-  h2:
-    console:
-      enabled: true
-      path: /h2
+        # El cerrojo del bloque no debe esperar para siempre: si otra transacción lo
+        # tiene tomado más de 3 s, se falla y se responde, en vez de dejar colgada la
+        # petición.
+        jakarta.persistence.lock.timeout: 3000
+
+  data:
+    redis:
+      host: ${SPRING_DATA_REDIS_HOST:localhost}
+      port: ${SPRING_DATA_REDIS_PORT:6379}
+      timeout: 2s
+
+  kafka:
+    bootstrap-servers: ${SPRING_KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      acks: all
+      properties:
+        enable.idempotence: true
+        max.in.flight.requests.per.connection: 5
+        delivery.timeout.ms: 15000
+        request.timeout.ms: 5000
+    consumer:
+      group-id: ${MEDITURNO_KAFKA_GRUPO:ms-reservas}
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      auto-offset-reset: earliest
+      enable-auto-commit: false
+    listener:
+      ack-mode: record
+
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+    default-property-inclusion: non_null
+
   thymeleaf:
     cache: false
   mvc:
@@ -32,6 +64,96 @@ mediturno:
     # En un ambiente productivo esto iría en false.
     habilitado: true
 
+  vencimiento-ofertas:
+    habilitado: ${MEDITURNO_VENCIMIENTO_OFERTAS:true}
+    cada-ms: 60000
+
+  kafka:
+    grupo-consumidor: ${MEDITURNO_KAFKA_GRUPO:ms-reservas}
+    particiones: 3
+    replicas: 1
+    reintentos: 2
+    espera-entre-reintentos-ms: 1000
+
+  clientes:
+    tarificacion:
+      url: ${MEDITURNO_TARIFICACION_URL:http://localhost:8081}
+      timeout-conexion-ms: 1000
+      timeout-lectura-ms: 2000
+    pacientes:
+      url: ${MEDITURNO_PACIENTES_URL:http://localhost:8083}
+      timeout-conexion-ms: 1000
+      timeout-lectura-ms: 2000
+    validador-prevision:
+      # Servicio externo. En desarrollo y en las pruebas se apunta a un doble de WireMock.
+      url: ${MEDITURNO_VALIDADOR_PREVISION_URL:http://localhost:8090}
+      timeout-conexion-ms: 1000
+      timeout-lectura-ms: 3000
+
+resilience4j:
+  circuitbreaker:
+    configs:
+      compartida:
+        slidingWindowType: COUNT_BASED
+        slidingWindowSize: 20
+        minimumNumberOfCalls: 10
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10s
+        permittedNumberOfCallsInHalfOpenState: 3
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        registerHealthIndicator: true
+        # Un 404 del padrón es una respuesta del negocio, no una falla del servicio:
+        # no debe contar para abrir el circuito.
+        ignoreExceptions:
+          - org.springframework.web.client.HttpClientErrorException$NotFound
+    instances:
+      tarificacion:
+        baseConfig: compartida
+      pacientes:
+        baseConfig: compartida
+      validadorPrevision:
+        baseConfig: compartida
+        # El validador tiene 97,2 % de disponibilidad histórica: se le tolera más antes
+        # de abrir, y se reintenta antes.
+        failureRateThreshold: 70
+        waitDurationInOpenState: 5s
+
+  retry:
+    configs:
+      compartida:
+        maxAttempts: 3
+        waitDuration: 200ms
+        enableExponentialBackoff: true
+        exponentialBackoffMultiplier: 2
+        retryExceptions:
+          - org.springframework.web.client.ResourceAccessException
+          - org.springframework.web.client.HttpServerErrorException
+        ignoreExceptions:
+          - org.springframework.web.client.HttpClientErrorException$NotFound
+          - cl.losandes.mediturno.reservas.dominio.ReglaNegocioException
+    instances:
+      tarificacion:
+        baseConfig: compartida
+      pacientes:
+        baseConfig: compartida
+      validadorPrevision:
+        baseConfig: compartida
+        maxAttempts: 2
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,circuitbreakers
+  endpoint:
+    health:
+      show-details: always
+      probes:
+        enabled: true
+  health:
+    circuitbreakers:
+      enabled: true
+
 springdoc:
   swagger-ui:
     path: /swagger
@@ -41,3 +163,4 @@ springdoc:
 logging:
   level:
     org.hibernate.SQL: warn
+    cl.losandes.mediturno: info

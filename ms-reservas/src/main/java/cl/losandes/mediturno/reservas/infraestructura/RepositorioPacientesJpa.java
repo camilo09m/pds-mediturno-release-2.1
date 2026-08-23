@@ -2,12 +2,14 @@ package cl.losandes.mediturno.reservas.infraestructura;
 
 import cl.losandes.mediturno.reservas.aplicacion.RepositorioPacientes;
 import cl.losandes.mediturno.reservas.dominio.Paciente;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
 
 @Repository
+@Profile("efimero")
 public class RepositorioPacientesJpa implements RepositorioPacientes {
 
     private final PacienteJpaRepository jpa;

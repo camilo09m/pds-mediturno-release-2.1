@@ -1,8 +1,29 @@
-# Perfil con base de datos en memoria: cada arranque parte de cero.
-# Uso:  mvn spring-boot:run -Dspring-boot.run.profiles=efimero
+# Perfil sin infraestructura: H2 en memoria, tarificación local, sin broker y sin
+# servicios externos. Cada arranque parte de cero.
+#
+#   mvn -pl ms-reservas spring-boot:run -Dspring-boot.run.profiles=efimero
+#
+# Es el perfil en el que siguen corriendo, sin cambios, las suites de las entregas 1 y 2.
 spring:
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.kafka.KafkaAutoConfiguration
+      - org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
+      - org.springframework.boot.autoconfigure.data.redis.RedisRepositoriesAutoConfiguration
   datasource:
     url: jdbc:h2:mem:reservas;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
   jpa:
     hibernate:
       ddl-auto: create-drop
+  h2:
+    console:
+      enabled: true
+      path: /h2
+
+management:
+  health:
+    circuitbreakers:
+      enabled: false

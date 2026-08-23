@@ -3,6 +3,7 @@ package cl.losandes.mediturno.reservas.infraestructura;
 import cl.losandes.mediturno.reservas.dominio.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
@@ -12,6 +13,7 @@ import java.time.LocalDate;
 
 /** Carga el padrón de pacientes de ejemplo si la base está vacía. */
 @Component
+@Profile("efimero")
 public class CargaInicial implements CommandLineRunner {
 
     private final PacienteJpaRepository pacientes;

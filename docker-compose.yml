@@ -1,0 +1,246 @@
+# MediTurno 2.0 — Release 2.1
+#
+#   docker compose up -d --build     levanta todo
+#   docker compose ps                estado de cada pieza
+#   docker compose down -v           lo baja y borra los datos
+#
+# El orden de arranque lo resuelven los healthcheck: ningún servicio parte antes de que
+# su dependencia esté realmente contestando, no solo "arriba".
+
+name: mediturno-release-2-1
+
+services:
+
+  # ------------------------------------------------------------ infraestructura
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: mediturno-postgres
+    environment:
+      POSTGRES_USER: mediturno
+      POSTGRES_PASSWORD: mediturno
+      POSTGRES_DB: mediturno
+    ports:
+      - "5432:5432"
+    volumes:
+      - datos-postgres:/var/lib/postgresql/data
+      - ./infra/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mediturno -d mediturno"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+      start_period: 10s
+
+  redis:
+    image: redis:7-alpine
+    container_name: mediturno-redis
+    command: ["redis-server", "--appendonly", "no", "--save", ""]
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  kafka:
+    image: apache/kafka:3.8.0
+    container_name: mediturno-kafka
+    ports:
+      - "9092:9092"
+      - "29092:29092"
+    environment:
+      CLUSTER_ID: mediturno-release-21-cluster
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092,CONTROLLER://0.0.0.0:9093,EXTERNO://0.0.0.0:29092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,EXTERNO://localhost:29092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT,EXTERNO:PLAINTEXT
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "false"
+      KAFKA_LOG_DIRS: /tmp/kraft-combined-logs
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/kafka/bin/kafka-topics.sh --bootstrap-server localhost:9092 --list >/dev/null 2>&1"]
+      interval: 10s
+      timeout: 10s
+      retries: 20
+      start_period: 20s
+
+  # Crea los topics una vez y termina. El broker tiene apagada la creación automática,
+  # así que ningún servicio puede inventar un topic por equivocarse en el nombre.
+  kafka-topics:
+    image: apache/kafka:3.8.0
+    container_name: mediturno-kafka-topics
+    entrypoint: ["/bin/bash", "/infra/kafka/crear-topics.sh"]
+    environment:
+      BROKER: kafka:9092
+      PARTICIONES: "3"
+      REPLICAS: "1"
+    volumes:
+      - ./infra/kafka:/infra/kafka:ro
+    depends_on:
+      kafka:
+        condition: service_healthy
+    restart: "no"
+
+  # ------------------------------------------------------- servicios externos
+  # Dobles de los dos terceros del enunciado. No son parte de MediTurno: están acá para
+  # que el sistema se pueda levantar completo sin depender de nadie.
+
+  validador-prevision:
+    image: wiremock/wiremock:3.9.1
+    container_name: mediturno-validador-prevision
+    command: ["--global-response-templating", "--verbose"]
+    ports:
+      - "8090:8080"
+    volumes:
+      - ./infra/wiremock/validador-prevision:/home/wiremock:ro
+
+  proveedor-mensajeria:
+    image: wiremock/wiremock:3.9.1
+    container_name: mediturno-proveedor-mensajeria
+    ports:
+      - "8091:8080"
+    volumes:
+      - ./infra/wiremock/mensajeria:/home/wiremock:ro
+
+  # --------------------------------------------------------------- MediTurno
+
+  ms-tarificacion:
+    build:
+      context: .
+      args:
+        SERVICIO: ms-tarificacion
+    image: mediturno/ms-tarificacion:2.1.0
+    container_name: mediturno-ms-tarificacion
+    ports:
+      - "8081:8081"
+    environment:
+      MEDITURNO_CONVENIOS_ARCHIVO: /app/datos/convenios.csv
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:8081/actuator/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
+
+  ms-pacientes:
+    build:
+      context: .
+      args:
+        SERVICIO: ms-pacientes
+    image: mediturno/ms-pacientes:2.1.0
+    container_name: mediturno-ms-pacientes
+    ports:
+      - "8083:8083"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/mediturno_pacientes
+      SPRING_DATASOURCE_USERNAME: mediturno
+      SPRING_DATASOURCE_PASSWORD: mediturno
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:8083/actuator/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
+
+  ms-reservas:
+    build:
+      context: .
+      args:
+        SERVICIO: ms-reservas
+    image: mediturno/ms-reservas:2.1.0
+    container_name: mediturno-ms-reservas
+    ports:
+      - "8082:8082"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/mediturno_reservas
+      SPRING_DATASOURCE_USERNAME: mediturno
+      SPRING_DATASOURCE_PASSWORD: mediturno
+      SPRING_DATA_REDIS_HOST: redis
+      SPRING_DATA_REDIS_PORT: 6379
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+      MEDITURNO_TARIFICACION_URL: http://ms-tarificacion:8081
+      MEDITURNO_PACIENTES_URL: http://ms-pacientes:8083
+      MEDITURNO_VALIDADOR_PREVISION_URL: http://validador-prevision:8080
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      kafka-topics:
+        condition: service_completed_successfully
+      ms-tarificacion:
+        condition: service_healthy
+      ms-pacientes:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:8082/actuator/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 40s
+
+  ms-notificaciones:
+    build:
+      context: .
+      args:
+        SERVICIO: ms-notificaciones
+    image: mediturno/ms-notificaciones:2.1.0
+    container_name: mediturno-ms-notificaciones
+    ports:
+      - "8084:8084"
+    environment:
+      SPRING_DATA_REDIS_HOST: redis
+      SPRING_DATA_REDIS_PORT: 6379
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+      MEDITURNO_MENSAJERIA_URL: http://proveedor-mensajeria:8080
+    depends_on:
+      redis:
+        condition: service_healthy
+      kafka-topics:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:8084/actuator/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
+
+  ms-pagos:
+    build:
+      context: .
+      args:
+        SERVICIO: ms-pagos
+    image: mediturno/ms-pagos:2.1.0
+    container_name: mediturno-ms-pagos
+    ports:
+      - "8085:8085"
+    environment:
+      SPRING_DATA_REDIS_HOST: redis
+      SPRING_DATA_REDIS_PORT: 6379
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+    depends_on:
+      redis:
+        condition: service_healthy
+      kafka-topics:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:8085/actuator/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
+
+volumes:
+  datos-postgres:

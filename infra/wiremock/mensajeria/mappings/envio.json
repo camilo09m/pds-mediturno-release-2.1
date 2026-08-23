@@ -1,0 +1,10 @@
+{
+  "priority": 10,
+  "request": { "method": "POST", "url": "/mensajes" },
+  "response": {
+    "status": 202,
+    "headers": { "Content-Type": "application/json" },
+    "jsonBody": { "estado": "ENCOLADO" },
+    "fixedDelayMilliseconds": 80
+  }
+}

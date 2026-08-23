@@ -35,6 +35,20 @@ public class ReservaService {
         this.notificador = notificador;
     }
 
+    /**
+     * Constructor de la versión 2.0, sin notificador.
+     *
+     * <p>El Release 2.1 incorpora el aviso automático de la lista de espera y, con él, una
+     * dependencia nueva. Esta sobrecarga se conserva a propósito para que las suites de
+     * pruebas escritas contra la versión 2.0 sigan compilando y ejecutándose sin cambios:
+     * una regresión de compilación en las pruebas del equipo no es una regresión del
+     * producto, pero cuesta lo mismo. El aviso simplemente no se emite.</p>
+     */
+    public ReservaService(RepositorioReservas reservas, RepositorioPacientes pacientes,
+                          TarificadorPort tarificador, Reloj reloj) {
+        this(reservas, pacientes, tarificador, reloj, reserva -> { });
+    }
+
     // ------------------------------------------------------------------ crear
 
     public Reserva crear(CrearReservaCmd cmd) {
@@ -120,9 +134,16 @@ public class ReservaService {
         }
     }
 
+    /**
+     * Cuenta los cupos tomados del bloque.
+     *
+     * <p>Consulta con intención de escritura: el adaptador de persistencia toma un
+     * cerrojo sobre las filas del bloque para que dos reservas simultáneas no puedan
+     * leer ambas el mismo último cupo disponible.</p>
+     */
     private boolean bloqueOcupado(LocalDateTime fechaHora, Especialidad especialidad) {
         LocalDateTime ahora = reloj.ahora();
-        long ocupados = reservas.enBloque(fechaHora, especialidad).stream()
+        long ocupados = reservas.enBloqueParaActualizar(fechaHora, especialidad).stream()
                 .filter(r -> r.ocupaCupo(ahora))
                 .count();
         return ocupados >= CUPOS_POR_BLOQUE;

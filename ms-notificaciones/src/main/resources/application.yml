@@ -1,0 +1,80 @@
+server:
+  port: ${SERVER_PORT:8084}
+
+spring:
+  application:
+    name: ms-notificaciones
+
+  data:
+    redis:
+      host: ${SPRING_DATA_REDIS_HOST:localhost}
+      port: ${SPRING_DATA_REDIS_PORT:6379}
+      timeout: 2s
+
+  kafka:
+    bootstrap-servers: ${SPRING_KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      acks: all
+    consumer:
+      group-id: ${MEDITURNO_KAFKA_GRUPO:ms-notificaciones}
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      auto-offset-reset: earliest
+      enable-auto-commit: false
+    listener:
+      ack-mode: record
+
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+
+mediturno:
+  kafka:
+    grupo-consumidor: ${MEDITURNO_KAFKA_GRUPO:ms-notificaciones}
+    reintentos: 2
+    espera-entre-reintentos-ms: 1000
+  clientes:
+    mensajeria:
+      # Servicio externo con cuota de 500 mensajes por hora.
+      url: ${MEDITURNO_MENSAJERIA_URL:http://localhost:8091}
+      timeout-conexion-ms: 1000
+      timeout-lectura-ms: 3000
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      mensajeria:
+        slidingWindowType: COUNT_BASED
+        slidingWindowSize: 20
+        minimumNumberOfCalls: 10
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10s
+        registerHealthIndicator: true
+        ignoreExceptions:
+          - cl.losandes.mediturno.notificaciones.proveedor.CuotaAgotadaException
+  retry:
+    instances:
+      mensajeria:
+        maxAttempts: 3
+        waitDuration: 200ms
+        enableExponentialBackoff: true
+        exponentialBackoffMultiplier: 2
+        ignoreExceptions:
+          - cl.losandes.mediturno.notificaciones.proveedor.CuotaAgotadaException
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,circuitbreakers
+  endpoint:
+    health:
+      show-details: always
+      probes:
+        enabled: true
+
+logging:
+  level:
+    cl.losandes.mediturno: info
