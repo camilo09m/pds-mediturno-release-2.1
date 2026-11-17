@@ -50,6 +50,6 @@ public class RepositorioReservasJpa implements RepositorioReservas {
 
     @Override
     public List<Reserva> todas() {
-        return jpa.findAllByOrderByFechaHoraAtencionAsc().stream().map(Mapeador::aDominio).toList();
+        return jpa.findAll().stream().map(Mapeador::aDominio).toList();
     }
 }

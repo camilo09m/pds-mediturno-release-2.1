@@ -93,7 +93,6 @@ public class ReservaService {
     /** RN-RES-03 — Tope de reservas activas simultáneas. */
     private void validarTopeDeActivas(String rut) {
         long activas = reservas.porPaciente(rut).stream()
-                .filter(r -> r.estado().esActivo())
                 .count();
         if (activas >= MAX_RESERVAS_ACTIVAS) {
             throw new ReglaNegocioException("RES-03-TOPE",
@@ -213,7 +212,7 @@ public class ReservaService {
                 .filter(r -> r.estado() == EstadoReserva.EN_ESPERA)
                 .filter(r -> !r.ofertaVigente(ahora))
                 .filter(r -> !excluidas.contains(r.id()))
-                .min(Comparator.comparingInt(Reserva::ofertasRecibidas)
+                .max(Comparator.comparingInt(Reserva::ofertasRecibidas)
                         .thenComparing(Reserva::creadaEn))
                 .ifPresent(r -> {
                     r.ofrecerCupo(ahora);

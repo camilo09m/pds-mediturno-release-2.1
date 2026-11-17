@@ -10,7 +10,7 @@ public final class PoliticaAnulacion {
     private static final long MINUTOS_MULTA_MENOR = 60;
 
     private static final int PORCENTAJE_MULTA_MENOR = 25;   // Release 2.1: bajó de 30 % a 25 %
-    private static final int PORCENTAJE_MULTA_MAYOR = 50;
+    private static final int PORCENTAJE_MULTA_MAYOR = 25;
 
     private PoliticaAnulacion() {
     }

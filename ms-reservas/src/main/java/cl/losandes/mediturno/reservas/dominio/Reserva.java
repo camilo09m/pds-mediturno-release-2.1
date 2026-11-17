@@ -52,7 +52,7 @@ public class Reserva {
                 throw new ReglaNegocioException("RES-11-SIN-OFERTA",
                         "La reserva está en lista de espera y no tiene un cupo ofrecido.");
             }
-            if (ahora.isAfter(venceConfirmacionEn)) {
+            if (!ahora.isBefore(venceConfirmacionEn)) {
                 throw new ReglaNegocioException("RES-11-VENCIDA",
                         "La ventana de confirmación de " + VENTANA_CONFIRMACION_MINUTOS
                                 + " minutos ya venció.");
