@@ -18,13 +18,13 @@ import java.time.Period;
  */
 public class TarificadorService {
 
-    private static final long TOPE_ISAPRE = 30_000L;
+    private static final long TOPE_ISAPRE = 35_000L;
     private static final int PORCENTAJE_ISAPRE = 60;
     private static final int PORCENTAJE_RECARGO_URGENCIA = 20;
     private static final int PORCENTAJE_RECARGO_HORARIO_EXTENDIDO = 15;
     private static final int PORCENTAJE_DESCUENTO_ADULTO_MAYOR = 10;
     private static final int PORCENTAJE_DESCUENTO_CONVENIO = 15;
-    private static final int EDAD_ADULTO_MAYOR = 65;
+    private static final int EDAD_ADULTO_MAYOR = 60;
     private static final int HORA_INICIO_HORARIO_EXTENDIDO = 18;
 
     private final Reloj reloj;
@@ -64,7 +64,10 @@ public class TarificadorService {
 
         String descuentoAplicado;
         long montoDescuento;
-        if (descuentoConvenio >= descuentoAdultoMayor && descuentoConvenio > 0) {
+        if (descuentoConvenio > 0 && descuentoAdultoMayor > 0) {
+            descuentoAplicado = "CONVENIO_EMPRESA";
+            montoDescuento = descuentoConvenio + descuentoAdultoMayor;
+        } else if (descuentoConvenio > 0) {
             descuentoAplicado = "CONVENIO_EMPRESA";
             montoDescuento = descuentoConvenio;
         } else if (descuentoAdultoMayor > 0) {

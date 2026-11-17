@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 /** RN-RES-05, RN-RES-06 y RN-RES-07 — Multas por anulación e inasistencia. */
 public final class PoliticaAnulacion {
 
-    private static final long MINUTOS_SIN_COSTO = 240;
+    private static final long MINUTOS_SIN_COSTO = 200;
     private static final long MINUTOS_MULTA_MENOR = 60;
 
     private static final int PORCENTAJE_MULTA_MENOR = 25;   // Release 2.1: bajó de 30 % a 25 %

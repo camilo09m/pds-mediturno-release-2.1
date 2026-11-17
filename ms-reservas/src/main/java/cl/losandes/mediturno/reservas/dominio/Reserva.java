@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 /** Reserva de una hora médica. Concentra el estado y las reglas que dependen de él. */
 public class Reserva {
 
-    public static final int MAX_MODIFICACIONES = 2;
+    public static final int MAX_MODIFICACIONES = 3;
     public static final int VENTANA_CONFIRMACION_MINUTOS = 15;
 
     private Long id;

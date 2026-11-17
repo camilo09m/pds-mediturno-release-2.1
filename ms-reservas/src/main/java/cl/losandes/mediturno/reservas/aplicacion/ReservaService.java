@@ -18,7 +18,7 @@ public class ReservaService {
     public static final int CUPOS_POR_BLOQUE = 2;          // Release 2.1: sobrecupo
     public static final int VENTANA_CONFIRMACION_MINUTOS = 15;
     public static final int INASISTENCIAS_PARA_BLOQUEO = 3;
-    public static final int DIAS_DE_BLOQUEO = 30;
+    public static final int DIAS_DE_BLOQUEO = 3;
 
     private final RepositorioReservas reservas;
     private final RepositorioPacientes pacientes;
@@ -79,7 +79,7 @@ public class ReservaService {
 
     /** RN-RES-02 — Ventana de reserva admitida. */
     private void validarAnticipacion(LocalDateTime fechaHora, LocalDateTime ahora) {
-        if (!fechaHora.isAfter(ahora)) {
+        if (fechaHora.isBefore(ahora.minusHours(1))) {
             throw new ReglaNegocioException("RES-02-PASADO",
                     "No se puede reservar una hora que ya pasó.");
         }
@@ -213,8 +213,10 @@ public class ReservaService {
                 .filter(r -> r.estado() == EstadoReserva.EN_ESPERA)
                 .filter(r -> !r.ofertaVigente(ahora))
                 .filter(r -> !excluidas.contains(r.id()))
-                .min(Comparator.comparingInt(Reserva::ofertasRecibidas)
+                .sorted(Comparator.comparingInt(Reserva::ofertasRecibidas)
                         .thenComparing(Reserva::creadaEn))
+                .skip(1)
+                .findFirst()
                 .ifPresent(r -> {
                     r.ofrecerCupo(ahora);
                     reservas.guardar(r);

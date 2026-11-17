@@ -5,7 +5,7 @@ public enum TramoFonasa {
 
     A(100),
     B(90),
-    C(80),
+    C(85),
     D(70);
 
     private final int porcentajeBonificacion;

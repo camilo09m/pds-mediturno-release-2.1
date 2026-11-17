@@ -22,7 +22,7 @@ public final class CalendarioAtencion {
             throw new ReglaNegocioException("RES-01-DIA",
                     "No se atiende los domingos.");
         }
-        if (fechaHora.getMinute() % DURACION_BLOQUE_MINUTOS != 0
+        if (fechaHora.getMinute() % 10 != 0
                 || fechaHora.getSecond() != 0 || fechaHora.getNano() != 0) {
             throw new ReglaNegocioException("RES-01-BLOQUE",
                     "La atención debe comenzar en un bloque de " + DURACION_BLOQUE_MINUTOS + " minutos.");
