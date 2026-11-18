@@ -1,0 +1,11 @@
+NAME                             STATUS
+mediturno-kafka                  Up 6 minutes (healthy)
+mediturno-ms-notificaciones      Up 4 minutes (healthy)
+mediturno-ms-pacientes           Up 2 minutes (healthy)
+mediturno-ms-pagos               Up 4 minutes (healthy)
+mediturno-ms-reservas            Up 2 minutes (healthy)
+mediturno-ms-tarificacion        Up 6 minutes (healthy)
+mediturno-postgres               Up 2 minutes (healthy)
+mediturno-proveedor-mensajeria   Up 6 minutes (healthy)
+mediturno-redis                  Up 5 minutes (healthy)
+mediturno-validador-prevision    Up 6 minutes (healthy)

@@ -1,0 +1,65 @@
+MediTurno 2.0 — Release 2.1 · verificación del ambiente
+
+1. Herramientas
+  ✔  Docker está instalado
+  ✔  El demonio de Docker responde
+  ✔  Docker Compose está disponible
+  ✔  Java está instalado
+  ✔  Maven está instalado
+  ✔  Java 21 cumple el mínimo de 17
+
+2. Contenedores
+  ✔  mediturno-postgres   (running, healthy)
+  ✔  mediturno-redis   (running, healthy)
+  ✔  mediturno-kafka   (running, healthy)
+  ✔  mediturno-validador-prevision   (running, healthy)
+  ✔  mediturno-proveedor-mensajeria   (running, healthy)
+  ✔  mediturno-ms-tarificacion   (running, healthy)
+  ✔  mediturno-ms-pacientes   (running, healthy)
+  ✔  mediturno-ms-reservas   (running, healthy)
+  ✔  mediturno-ms-notificaciones   (running, healthy)
+  ✔  mediturno-ms-pagos   (running, healthy)
+
+3. PostgreSQL
+  ✔  acepta conexiones
+  ✔  la base mediturno_reservas existe y responde
+  ✔  la base mediturno_pacientes existe y responde
+
+4. Redis
+  ✔  responde PING
+  ✔  escribe y lee una clave con expiración
+
+5. Kafka
+  ✔  el broker responde
+  ✔  topic mediturno.reservas.eventos
+  ✔  topic mediturno.reservas.eventos.dlq
+  ✔  topic mediturno.notificaciones.solicitudes
+  ✔  topic mediturno.notificaciones.solicitudes.dlq
+  ✔  topic mediturno.pagos.confirmaciones
+  ✔  topic mediturno.pagos.confirmaciones.dlq
+
+6. Servicios
+  ✔  ms-tarificacion   :8081   UP
+  ✔  ms-pacientes   :8083   UP
+  ✔  ms-reservas   :8082   UP
+  ✔  ms-notificaciones   :8084   UP
+  ✔  ms-pagos   :8085   UP
+
+7. Dobles de los servicios externos
+  ✔  Validador de Previsión responde en :8090
+  ✔  Proveedor de mensajería responde en :8091
+
+8. Las piezas conectadas entre sí
+  ✔  ms-pacientes devuelve un paciente del padrón
+  ✔  ms-tarificacion calcula y devuelve el desglose
+  ✔  ms-reservas alcanza a ms-pacientes por HTTP
+  ✔  la interfaz web de ms-reservas responde
+  ✔  ms-pagos recibe el webhook de Webpay y lo publica
+  ✔  circuito 'tarificacion' registrado
+  ✔  circuito 'pacientes' registrado
+  ✔  circuito 'validadorPrevision' registrado
+
+Resumen
+  43 de 43 comprobaciones en verde
+
+El ambiente está completo. Puede empezar.

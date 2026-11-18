@@ -43,7 +43,7 @@
         <springdoc.version>2.6.0</springdoc.version>
 
         <!-- herramientas que incorpora la Entrega 3 -->
-        <testcontainers.version>1.20.2</testcontainers.version>
+        <testcontainers.version>1.21.4</testcontainers.version>
         <pact.version>4.6.14</pact.version>
         <wiremock.version>3.9.1</wiremock.version>
         <toxiproxy.version>2.1.7</toxiproxy.version>

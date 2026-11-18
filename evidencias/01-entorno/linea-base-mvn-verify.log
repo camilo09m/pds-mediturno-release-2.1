@@ -1,0 +1,1488 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] mediturno-release-2.1                                              [pom]
+[INFO] ms-tarificacion                                                    [jar]
+[INFO] ms-pacientes                                                       [jar]
+[INFO] ms-reservas                                                        [jar]
+[INFO] ms-notificaciones                                                  [jar]
+[INFO] ms-pagos                                                           [jar]
+[INFO] 
+[INFO] ------------< cl.losandes.mediturno:mediturno-release-2.1 >-------------
+[INFO] Building mediturno-release-2.1 2.1.0                               [1/6]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ mediturno-release-2.1 ---
+[INFO] Deleting /home/cadel/Escritorio/mediturno/entrega-3/target
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (preparar-agente) @ mediturno-release-2.1 ---
+[INFO] argLine set to -javaagent:/home/cadel/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=/home/cadel/Escritorio/mediturno/entrega-3/target/jacoco.exec
+[INFO] 
+[INFO] --- failsafe:3.2.5:integration-test (default) @ mediturno-release-2.1 ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- jacoco:0.8.12:report (reporte) @ mediturno-release-2.1 ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO] 
+[INFO] --- failsafe:3.2.5:verify (default) @ mediturno-release-2.1 ---
+[INFO] 
+[INFO] ---------------< cl.losandes.mediturno:ms-tarificacion >----------------
+[INFO] Building ms-tarificacion 2.1.0                                     [2/6]
+[INFO]   from ms-tarificacion/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ ms-tarificacion ---
+[INFO] Deleting /home/cadel/Escritorio/mediturno/entrega-3/ms-tarificacion/target
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (preparar-agente) @ ms-tarificacion ---
+[INFO] argLine set to -javaagent:/home/cadel/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=/home/cadel/Escritorio/mediturno/entrega-3/ms-tarificacion/target/jacoco.exec
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ ms-tarificacion ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ ms-tarificacion ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 14 source files with javac [debug parameters release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ ms-tarificacion ---
+[INFO] skip non existing resourceDirectory /home/cadel/Escritorio/mediturno/entrega-3/ms-tarificacion/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ ms-tarificacion ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 17] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ ms-tarificacion ---
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ ms-tarificacion ---
+[INFO] Building jar: /home/cadel/Escritorio/mediturno/entrega-3/ms-tarificacion/target/ms-tarificacion-2.1.0.jar
+[INFO] 
+[INFO] --- spring-boot:3.3.4:repackage (repackage) @ ms-tarificacion ---
+[INFO] Replacing main artifact /home/cadel/Escritorio/mediturno/entrega-3/ms-tarificacion/target/ms-tarificacion-2.1.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /home/cadel/Escritorio/mediturno/entrega-3/ms-tarificacion/target/ms-tarificacion-2.1.0.jar.original
+[INFO] 
+[INFO] --- spring-boot:3.3.4:repackage (default) @ ms-tarificacion ---
+[INFO] Replacing main artifact /home/cadel/Escritorio/mediturno/entrega-3/ms-tarificacion/target/ms-tarificacion-2.1.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /home/cadel/Escritorio/mediturno/entrega-3/ms-tarificacion/target/ms-tarificacion-2.1.0.jar.original
+[INFO] 
+[INFO] --- failsafe:3.2.5:integration-test (default) @ ms-tarificacion ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running cl.losandes.mediturno.tarificacion.plomeria.TarificacionRespondeIT
+Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2026-11-18T12:21:58.386-03:00  INFO 96814 --- [ms-tarificacion] [           main] c.l.m.t.plomeria.TarificacionRespondeIT  : Starting TarificacionRespondeIT using Java 21.0.11 with PID 96814 (started by cadel in /home/cadel/Escritorio/mediturno/entrega-3/ms-tarificacion)
+2026-11-18T12:21:58.399-03:00  INFO 96814 --- [ms-tarificacion] [           main] c.l.m.t.plomeria.TarificacionRespondeIT  : The following 1 profile is active: "local"
+2026-11-18T12:22:03.190-03:00  INFO 96814 --- [ms-tarificacion] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2026-11-18T12:22:03.229-03:00  INFO 96814 --- [ms-tarificacion] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-18T12:22:03.230-03:00  INFO 96814 --- [ms-tarificacion] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2026-11-18T12:22:03.340-03:00  INFO 96814 --- [ms-tarificacion] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-18T12:22:03.341-03:00  INFO 96814 --- [ms-tarificacion] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4277 ms
+Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+2026-11-18T12:22:05.136-03:00  INFO 96814 --- [ms-tarificacion] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-11-18T12:22:05.667-03:00  INFO 96814 --- [ms-tarificacion] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 35011 (http) with context path '/'
+2026-11-18T12:22:05.694-03:00  INFO 96814 --- [ms-tarificacion] [           main] c.l.m.t.plomeria.TarificacionRespondeIT  : Started TarificacionRespondeIT in 8.341 seconds (process running for 11.629)
+WARNING: A Java agent has been loaded dynamically (/home/cadel/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.19/byte-buddy-agent-1.14.19.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2026-11-18T12:22:07.929-03:00  INFO 96814 --- [ms-tarificacion] [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-18T12:22:07.930-03:00  INFO 96814 --- [ms-tarificacion] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-18T12:22:07.933-03:00  INFO 96814 --- [ms-tarificacion] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.43 s -- in cl.losandes.mediturno.tarificacion.plomeria.TarificacionRespondeIT
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jacoco:0.8.12:report (reporte) @ ms-tarificacion ---
+[INFO] Loading execution data file /home/cadel/Escritorio/mediturno/entrega-3/ms-tarificacion/target/jacoco.exec
+[INFO] Analyzed bundle 'ms-tarificacion' with 12 classes
+[INFO] 
+[INFO] --- failsafe:3.2.5:verify (default) @ ms-tarificacion ---
+[INFO] 
+[INFO] -----------------< cl.losandes.mediturno:ms-pacientes >-----------------
+[INFO] Building ms-pacientes 2.1.0                                        [3/6]
+[INFO]   from ms-pacientes/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ ms-pacientes ---
+[INFO] Deleting /home/cadel/Escritorio/mediturno/entrega-3/ms-pacientes/target
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (preparar-agente) @ ms-pacientes ---
+[INFO] argLine set to -javaagent:/home/cadel/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=/home/cadel/Escritorio/mediturno/entrega-3/ms-pacientes/target/jacoco.exec
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ ms-pacientes ---
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ ms-pacientes ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 15 source files with javac [debug parameters release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ ms-pacientes ---
+[INFO] skip non existing resourceDirectory /home/cadel/Escritorio/mediturno/entrega-3/ms-pacientes/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ ms-pacientes ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 17] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ ms-pacientes ---
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ ms-pacientes ---
+[INFO] Building jar: /home/cadel/Escritorio/mediturno/entrega-3/ms-pacientes/target/ms-pacientes-2.1.0.jar
+[INFO] 
+[INFO] --- spring-boot:3.3.4:repackage (repackage) @ ms-pacientes ---
+[INFO] Replacing main artifact /home/cadel/Escritorio/mediturno/entrega-3/ms-pacientes/target/ms-pacientes-2.1.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /home/cadel/Escritorio/mediturno/entrega-3/ms-pacientes/target/ms-pacientes-2.1.0.jar.original
+[INFO] 
+[INFO] --- spring-boot:3.3.4:repackage (default) @ ms-pacientes ---
+[INFO] Replacing main artifact /home/cadel/Escritorio/mediturno/entrega-3/ms-pacientes/target/ms-pacientes-2.1.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /home/cadel/Escritorio/mediturno/entrega-3/ms-pacientes/target/ms-pacientes-2.1.0.jar.original
+[INFO] 
+[INFO] --- failsafe:3.2.5:integration-test (default) @ ms-pacientes ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running cl.losandes.mediturno.pacientes.plomeria.PadronRespondeIT
+Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+12:22:15.054 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [cl.losandes.mediturno.pacientes.plomeria.PadronRespondeIT]: PadronRespondeIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+12:22:15.252 [main] INFO org.testcontainers.images.PullPolicy -- Image pull policy will be performed by: DefaultPullPolicy()
+12:22:15.263 [main] INFO org.testcontainers.utility.ImageNameSubstitutor -- Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+12:22:15.346 [main] INFO org.testcontainers.DockerClientFactory -- Testcontainers version: 1.20.2
+12:22:16.814 [main] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Found Docker environment with Environment variables, system properties and defaults. Resolved dockerHost=unix:///var/run/docker.sock
+12:22:16.816 [main] INFO org.testcontainers.DockerClientFactory -- Docker host IP address is localhost
+12:22:16.853 [main] INFO org.testcontainers.DockerClientFactory -- Connected to docker: 
+  Server Version: 29.5.3
+  API Version: 1.54
+  Operating System: Fedora Linux 42 (Workstation Edition)
+  Total Memory: 15669 MB
+12:22:17.062 [main] INFO tc.testcontainers/ryuk:0.9.0 -- Creating container for image: testcontainers/ryuk:0.9.0
+12:22:17.487 [main] INFO tc.testcontainers/ryuk:0.9.0 -- Container testcontainers/ryuk:0.9.0 is starting: a0adb51bb70ebd1530200cd93ed3f6647d30457e24782dbc2781a1858d00e199
+12:22:18.027 [main] INFO tc.testcontainers/ryuk:0.9.0 -- Container testcontainers/ryuk:0.9.0 started in PT0.964782491S
+12:22:18.036 [main] INFO org.testcontainers.utility.RyukResourceReaper -- Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+12:22:18.037 [main] INFO org.testcontainers.DockerClientFactory -- Checking the system...
+12:22:18.038 [main] INFO org.testcontainers.DockerClientFactory -- ✔︎ Docker server version should be at least 1.6.0
+12:22:18.377 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration cl.losandes.mediturno.pacientes.MsPacientesApplication for test class cl.losandes.mediturno.pacientes.plomeria.PadronRespondeIT
+12:22:18.686 [main] INFO tc.postgres:16-alpine -- Creating container for image: postgres:16-alpine
+12:22:18.779 [main] INFO tc.postgres:16-alpine -- Container postgres:16-alpine is starting: 086e7c0117fe05bc4cf8dbd10c4192a21b355e61bfec9eaf3fbde4b4bdfd55d2
+12:22:22.587 [main] INFO tc.postgres:16-alpine -- Container postgres:16-alpine started in PT3.900774394S
+12:22:22.588 [main] INFO tc.postgres:16-alpine -- Container is started (JDBC URL: jdbc:postgresql://localhost:32776/mediturno_pacientes?loggerLevel=OFF)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2026-11-18T12:22:23.520-03:00  INFO 96996 --- [ms-pacientes] [           main] c.l.m.p.plomeria.PadronRespondeIT        : Starting PadronRespondeIT using Java 21.0.11 with PID 96996 (started by cadel in /home/cadel/Escritorio/mediturno/entrega-3/ms-pacientes)
+2026-11-18T12:22:23.523-03:00  INFO 96996 --- [ms-pacientes] [           main] c.l.m.p.plomeria.PadronRespondeIT        : The following 1 profile is active: "local"
+2026-11-18T12:22:27.367-03:00  INFO 96996 --- [ms-pacientes] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-18T12:22:27.698-03:00  INFO 96996 --- [ms-pacientes] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 311 ms. Found 1 JPA repository interface.
+2026-11-18T12:22:29.264-03:00  INFO 96996 --- [ms-pacientes] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2026-11-18T12:22:29.304-03:00  INFO 96996 --- [ms-pacientes] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-18T12:22:29.305-03:00  INFO 96996 --- [ms-pacientes] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2026-11-18T12:22:29.420-03:00  INFO 96996 --- [ms-pacientes] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-18T12:22:29.421-03:00  INFO 96996 --- [ms-pacientes] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5361 ms
+Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+2026-11-18T12:22:30.082-03:00  INFO 96996 --- [ms-pacientes] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-18T12:22:30.207-03:00  INFO 96996 --- [ms-pacientes] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-11-18T12:22:30.284-03:00  INFO 96996 --- [ms-pacientes] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-18T12:22:30.942-03:00  INFO 96996 --- [ms-pacientes] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-18T12:22:31.018-03:00  INFO 96996 --- [ms-pacientes] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-18T12:22:31.459-03:00  INFO 96996 --- [ms-pacientes] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@531a08c3
+2026-11-18T12:22:31.463-03:00  INFO 96996 --- [ms-pacientes] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-18T12:22:33.593-03:00  INFO 96996 --- [ms-pacientes] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-18T12:22:33.631-03:00  WARN 96996 --- [ms-pacientes] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2026-11-18T12:22:33.632-03:00  WARN 96996 --- [ms-pacientes] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "paciente" does not exist, skipping
+2026-11-18T12:22:33.660-03:00  INFO 96996 --- [ms-pacientes] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-18T12:22:36.376-03:00  INFO 96996 --- [ms-pacientes] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-11-18T12:22:36.825-03:00  INFO 96996 --- [ms-pacientes] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 44235 (http) with context path '/'
+2026-11-18T12:22:36.852-03:00  INFO 96996 --- [ms-pacientes] [           main] c.l.m.p.plomeria.PadronRespondeIT        : Started PadronRespondeIT in 14.171 seconds (process running for 24.125)
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (/home/cadel/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.19/byte-buddy-agent-1.14.19.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+2026-11-18T12:22:39.306-03:00  INFO 96996 --- [ms-pacientes] [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-18T12:22:39.307-03:00  INFO 96996 --- [ms-pacientes] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-18T12:22:39.309-03:00  INFO 96996 --- [ms-pacientes] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 26.01 s -- in cl.losandes.mediturno.pacientes.plomeria.PadronRespondeIT
+2026-11-18T12:22:41.833-03:00  INFO 96996 --- [ms-pacientes] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-18T12:22:41.840-03:00  WARN 96996 --- [ms-pacientes] [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@531a08c3 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-11-18T12:22:41.841-03:00  WARN 96996 --- [ms-pacientes] [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@4acdb16a (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-11-18T12:22:41.842-03:00  WARN 96996 --- [ms-pacientes] [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@248edef1 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-11-18T12:22:41.843-03:00  WARN 96996 --- [ms-pacientes] [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@2f54cc03 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-11-18T12:22:41.844-03:00  WARN 96996 --- [ms-pacientes] [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@3cce9a9e (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-11-18T12:22:41.844-03:00  WARN 96996 --- [ms-pacientes] [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@1baf3a8c (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-11-18T12:22:41.845-03:00  WARN 96996 --- [ms-pacientes] [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@4984165e (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-11-18T12:22:41.846-03:00  WARN 96996 --- [ms-pacientes] [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@4039ffb9 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-11-18T12:22:41.847-03:00  WARN 96996 --- [ms-pacientes] [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@86b974a (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-11-18T12:22:41.848-03:00  WARN 96996 --- [ms-pacientes] [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@6a72a791 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+[ERROR] Surefire is going to kill self fork JVM. The exit has elapsed 30 seconds after System.exit(0).
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jacoco:0.8.12:report (reporte) @ ms-pacientes ---
+[INFO] Loading execution data file /home/cadel/Escritorio/mediturno/entrega-3/ms-pacientes/target/jacoco.exec
+[INFO] Analyzed bundle 'ms-pacientes' with 14 classes
+[INFO] 
+[INFO] --- failsafe:3.2.5:verify (default) @ ms-pacientes ---
+[INFO] 
+[INFO] -----------------< cl.losandes.mediturno:ms-reservas >------------------
+[INFO] Building ms-reservas 2.1.0                                         [4/6]
+[INFO]   from ms-reservas/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-data-redis/3.3.4/spring-boot-starter-data-redis-3.3.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-data-redis/3.3.4/spring-boot-starter-data-redis-3.3.4.pom (2.5 kB at 5.0 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/lettuce/lettuce-core/6.3.2.RELEASE/lettuce-core-6.3.2.RELEASE.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/lettuce/lettuce-core/6.3.2.RELEASE/lettuce-core-6.3.2.RELEASE.pom (7.4 kB at 127 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-redis/3.3.4/spring-data-redis-3.3.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-redis/3.3.4/spring-data-redis-3.3.4.pom (9.6 kB at 166 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-keyvalue/3.3.4/spring-data-keyvalue-3.3.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-keyvalue/3.3.4/spring-data-keyvalue-3.3.4.pom (2.7 kB at 45 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-oxm/6.1.13/spring-oxm-6.1.13.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-oxm/6.1.13/spring-oxm-6.1.13.pom (2.4 kB at 41 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/kafka/spring-kafka/3.2.4/spring-kafka-3.2.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/kafka/spring-kafka/3.2.4/spring-kafka-3.2.4.pom (7.4 kB at 137 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-messaging/6.1.13/spring-messaging-6.1.13.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-messaging/6.1.13/spring-messaging-6.1.13.pom (2.2 kB at 49 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/retry/spring-retry/2.0.9/spring-retry-2.0.9.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/retry/spring-retry/2.0.9/spring-retry-2.0.9.pom (8.8 kB at 151 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-framework-bom/6.0.23/spring-framework-bom-6.0.23.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-framework-bom/6.0.23/spring-framework-bom-6.0.23.pom (5.8 kB at 97 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-bom/2.24.0/log4j-bom-2.24.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-bom/2.24.0/log4j-bom-2.24.0.pom (12 kB at 223 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/logging/logging-parent/11.2.0/logging-parent-11.2.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/logging/logging-parent/11.2.0/logging-parent-11.2.0.pom (53 kB at 686 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-clients/3.7.1/kafka-clients-3.7.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-clients/3.7.1/kafka-clients-3.7.1.pom (1.4 kB at 26 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/github/luben/zstd-jni/1.5.6-3/zstd-jni-1.5.6-3.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/github/luben/zstd-jni/1.5.6-3/zstd-jni-1.5.6-3.pom (2.0 kB at 39 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/lz4/lz4-java/1.8.0/lz4-java-1.8.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/lz4/lz4-java/1.8.0/lz4-java-1.8.0.pom (2.1 kB at 35 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-spring-boot3/2.2.0/resilience4j-spring-boot3-2.2.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-spring-boot3/2.2.0/resilience4j-spring-boot3-2.2.0.pom (2.6 kB at 49 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-spring6/2.2.0/resilience4j-spring6-2.2.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-spring6/2.2.0/resilience4j-spring6-2.2.0.pom (2.8 kB at 44 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-annotations/2.2.0/resilience4j-annotations-2.2.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-annotations/2.2.0/resilience4j-annotations-2.2.0.pom (2.1 kB at 40 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-consumer/2.2.0/resilience4j-consumer-2.2.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-consumer/2.2.0/resilience4j-consumer-2.2.0.pom (2.5 kB at 46 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-core/2.2.0/resilience4j-core-2.2.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-core/2.2.0/resilience4j-core-2.2.0.pom (2.1 kB at 36 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-circularbuffer/2.2.0/resilience4j-circularbuffer-2.2.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-circularbuffer/2.2.0/resilience4j-circularbuffer-2.2.0.pom (2.1 kB at 36 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-framework-common/2.2.0/resilience4j-framework-common-2.2.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-framework-common/2.2.0/resilience4j-framework-common-2.2.0.pom (3.4 kB at 65 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-circuitbreaker/2.2.0/resilience4j-circuitbreaker-2.2.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-circuitbreaker/2.2.0/resilience4j-circuitbreaker-2.2.0.pom (2.3 kB at 43 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-ratelimiter/2.2.0/resilience4j-ratelimiter-2.2.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-ratelimiter/2.2.0/resilience4j-ratelimiter-2.2.0.pom (2.3 kB at 38 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-retry/2.2.0/resilience4j-retry-2.2.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-retry/2.2.0/resilience4j-retry-2.2.0.pom (2.3 kB at 46 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-bulkhead/2.2.0/resilience4j-bulkhead-2.2.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-bulkhead/2.2.0/resilience4j-bulkhead-2.2.0.pom (2.3 kB at 42 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-timelimiter/2.2.0/resilience4j-timelimiter-2.2.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-timelimiter/2.2.0/resilience4j-timelimiter-2.2.0.pom (2.3 kB at 30 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-micrometer/2.2.0/resilience4j-micrometer-2.2.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-micrometer/2.2.0/resilience4j-micrometer-2.2.0.pom (3.5 kB at 64 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/cucumber/messages/maven-metadata.xml
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/cucumber/messages/maven-metadata.xml (3.7 kB at 64 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/cucumber/query/maven-metadata.xml
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/cucumber/query/maven-metadata.xml (1.4 kB at 24 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/kafka/spring-kafka-test/3.2.4/spring-kafka-test-3.2.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/kafka/spring-kafka-test/3.2.4/spring-kafka-test-3.2.4.pom (6.8 kB at 91 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/zookeeper/zookeeper/3.8.4/zookeeper-3.8.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/zookeeper/zookeeper/3.8.4/zookeeper-3.8.4.pom (12 kB at 215 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/zookeeper/parent/3.8.4/parent-3.8.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/zookeeper/parent/3.8.4/parent-3.8.4.pom (42 kB at 665 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/zookeeper/zookeeper-jute/3.8.4/zookeeper-jute-3.8.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/zookeeper/zookeeper-jute/3.8.4/zookeeper-jute-3.8.4.pom (6.7 kB at 127 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/yetus/audience-annotations/0.12.0/audience-annotations-0.12.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/yetus/audience-annotations/0.12.0/audience-annotations-0.12.0.pom (2.8 kB at 28 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/yetus/yetus-project/0.12.0/yetus-project-0.12.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/yetus/yetus-project/0.12.0/yetus-project-0.12.0.pom (12 kB at 124 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/netty/netty-transport-native-epoll/4.1.113.Final/netty-transport-native-epoll-4.1.113.Final.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/netty/netty-transport-native-epoll/4.1.113.Final/netty-transport-native-epoll-4.1.113.Final.pom (27 kB at 494 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/netty/netty-transport-classes-epoll/4.1.113.Final/netty-transport-classes-epoll-4.1.113.Final.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/netty/netty-transport-classes-epoll/4.1.113.Final/netty-transport-classes-epoll-4.1.113.Final.pom (2.1 kB at 40 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-metadata/3.7.1/kafka-metadata-3.7.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-metadata/3.7.1/kafka-metadata-3.7.1.pom (2.2 kB at 39 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-server-common/3.7.1/kafka-server-common-3.7.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-server-common/3.7.1/kafka-server-common-3.7.1.pom (2.2 kB at 29 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/yammer/metrics/metrics-core/2.2.0/metrics-core-2.2.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/yammer/metrics/metrics-core/2.2.0/metrics-core-2.2.0.pom (1.3 kB at 23 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/yammer/metrics/metrics-parent/2.2.0/metrics-parent-2.2.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/yammer/metrics/metrics-parent/2.2.0/metrics-parent-2.2.0.pom (10 kB at 181 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/pcollections/pcollections/4.0.1/pcollections-4.0.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/pcollections/pcollections/4.0.1/pcollections-4.0.1.pom (1.5 kB at 28 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-raft/3.7.1/kafka-raft-3.7.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-raft/3.7.1/kafka-raft-3.7.1.pom (1.8 kB at 19 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-streams-test-utils/3.7.1/kafka-streams-test-utils-3.7.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-streams-test-utils/3.7.1/kafka-streams-test-utils-3.7.1.pom (1.6 kB at 27 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-streams/3.7.1/kafka-streams-3.7.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-streams/3.7.1/kafka-streams-3.7.1.pom (2.0 kB at 41 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/rocksdb/rocksdbjni/7.9.2/rocksdbjni-7.9.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/rocksdb/rocksdbjni/7.9.2/rocksdbjni-7.9.2.pom (7.4 kB at 145 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka_2.13/3.7.1/kafka_2.13-3.7.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka_2.13/3.7.1/kafka_2.13-3.7.1.pom (25 kB at 481 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.13.12/scala-library-2.13.12.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.13.12/scala-library-2.13.12.pom (1.6 kB at 31 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-group-coordinator/3.7.1/kafka-group-coordinator-3.7.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-group-coordinator/3.7.1/kafka-group-coordinator-3.7.1.pom (2.0 kB at 36 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-storage-api/3.7.1/kafka-storage-api-3.7.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-storage-api/3.7.1/kafka-storage-api-3.7.1.pom (1.8 kB at 35 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-tools-api/3.7.1/kafka-tools-api-3.7.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-tools-api/3.7.1/kafka-tools-api-3.7.1.pom (1.3 kB at 24 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-storage/3.7.1/kafka-storage-3.7.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-storage/3.7.1/kafka-storage-3.7.1.pom (2.4 kB at 43 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/github/ben-manes/caffeine/caffeine/3.1.8/caffeine-3.1.8.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/github/ben-manes/caffeine/caffeine/3.1.8/caffeine-3.1.8.pom (2.1 kB at 36 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.37.0/checker-qual-3.37.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.37.0/checker-qual-3.37.0.pom (2.1 kB at 45 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.21.1/error_prone_annotations-2.21.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.21.1/error_prone_annotations-2.21.1.pom (1.8 kB at 36 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_parent/2.21.1/error_prone_parent-2.21.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_parent/2.21.1/error_prone_parent-2.21.1.pom (13 kB at 242 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-server/3.7.1/kafka-server-3.7.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-server/3.7.1/kafka-server-3.7.1.pom (1.8 kB at 32 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/sourceforge/argparse4j/argparse4j/0.7.0/argparse4j-0.7.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/sourceforge/argparse4j/argparse4j/0.7.0/argparse4j-0.7.0.pom (5.5 kB at 105 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-validator/commons-validator/1.7/commons-validator-1.7.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-validator/commons-validator/1.7/commons-validator-1.7.pom (14 kB at 246 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-digester/commons-digester/2.1/commons-digester-2.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-digester/commons-digester/2.1/commons-digester-2.1.pom (10 kB at 201 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/17/commons-parent-17.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/17/commons-parent-17.pom (31 kB at 588 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-module-scala_2.13/2.17.2/jackson-module-scala_2.13-2.17.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-module-scala_2.13/2.17.2/jackson-module-scala_2.13-2.17.2.pom (4.9 kB at 96 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.13.13/scala-library-2.13.13.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.13.13/scala-library-2.13.13.pom (1.6 kB at 33 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/thoughtworks/paranamer/paranamer/2.8/paranamer-2.8.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/thoughtworks/paranamer/paranamer/2.8/paranamer-2.8.pom (5.3 kB at 93 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/thoughtworks/paranamer/paranamer-parent/2.8/paranamer-parent-2.8.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/thoughtworks/paranamer/paranamer-parent/2.8/paranamer-parent-2.8.pom (12 kB at 222 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-csv/2.17.2/jackson-dataformat-csv-2.17.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-csv/2.17.2/jackson-dataformat-csv-2.17.2.pom (3.0 kB at 60 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/bitbucket/b_c/jose4j/0.9.4/jose4j-0.9.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/bitbucket/b_c/jose4j/0.9.4/jose4j-0.9.4.pom (8.9 kB at 174 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/scala-lang/modules/scala-collection-compat_2.13/2.10.0/scala-collection-compat_2.13-2.10.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/scala-lang/modules/scala-collection-compat_2.13/2.10.0/scala-collection-compat_2.13-2.10.0.pom (2.1 kB at 40 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.13.10/scala-library-2.13.10.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.13.10/scala-library-2.13.10.pom (1.6 kB at 33 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/scala-lang/modules/scala-java8-compat_2.13/1.0.2/scala-java8-compat_2.13-1.0.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/scala-lang/modules/scala-java8-compat_2.13/1.0.2/scala-java8-compat_2.13-1.0.2.pom (2.5 kB at 47 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.13.6/scala-library-2.13.6.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.13.6/scala-library-2.13.6.pom (1.6 kB at 29 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/scala-lang/scala-reflect/2.13.12/scala-reflect-2.13.12.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/scala-lang/scala-reflect/2.13.12/scala-reflect-2.13.12.pom (1.8 kB at 34 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/typesafe/scala-logging/scala-logging_2.13/3.9.4/scala-logging_2.13-3.9.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/typesafe/scala-logging/scala-logging_2.13/3.9.4/scala-logging_2.13-3.9.4.pom (2.7 kB at 53 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.13.5/scala-library-2.13.5.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.13.5/scala-library-2.13.5.pom (1.6 kB at 35 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/scala-lang/scala-reflect/2.13.5/scala-reflect-2.13.5.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/scala-lang/scala-reflect/2.13.5/scala-reflect-2.13.5.pom (1.8 kB at 35 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/dropwizard/metrics/metrics-core/4.1.12.1/metrics-core-4.1.12.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/dropwizard/metrics/metrics-core/4.1.12.1/metrics-core-4.1.12.1.pom (947 B at 15 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/dropwizard/metrics/metrics-parent/4.1.12.1/metrics-parent-4.1.12.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/dropwizard/metrics/metrics-parent/4.1.12.1/metrics-parent-4.1.12.1.pom (15 kB at 266 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-cli/commons-cli/1.4/commons-cli-1.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-cli/commons-cli/1.4/commons-cli-1.4.pom (11 kB at 206 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/testcontainers/kafka/1.20.2/kafka-1.20.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/testcontainers/kafka/1.20.2/kafka-1.20.2.pom (1.5 kB at 14 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/testcontainers/toxiproxy/1.20.2/toxiproxy-1.20.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/testcontainers/toxiproxy/1.20.2/toxiproxy-1.20.2.pom (1.7 kB at 5.8 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/eu/rekawek/toxiproxy/toxiproxy-java/2.1.7/toxiproxy-java-2.1.7.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/eu/rekawek/toxiproxy/toxiproxy-java/2.1.7/toxiproxy-java-2.1.7.pom (5.0 kB at 93 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wiremock/wiremock-standalone/3.9.1/wiremock-standalone-3.9.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wiremock/wiremock-standalone/3.9.1/wiremock-standalone-3.9.1.pom (1.1 kB at 19 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/au/com/dius/pact/consumer/junit5/4.6.14/junit5-4.6.14.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/au/com/dius/pact/consumer/junit5/4.6.14/junit5-4.6.14.pom (6.2 kB at 52 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/au/com/dius/pact/consumer/4.6.14/consumer-4.6.14.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/au/com/dius/pact/consumer/4.6.14/consumer-4.6.14.pom (9.1 kB at 79 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/json/json/20240205/json-20240205.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/json/json/20240205/json-20240205.pom (7.7 kB at 140 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/googlecode/java-diff-utils/diffutils/1.3.0/diffutils-1.3.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/googlecode/java-diff-utils/diffutils/1.3.0/diffutils-1.3.0.pom (2.8 kB at 53 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-server-netty/2.3.8/ktor-server-netty-2.3.8.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-server-netty/2.3.8/ktor-server-netty-2.3.8.pom (1.9 kB at 39 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core/1.8.1/kotlinx-coroutines-core-1.8.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core/1.8.1/kotlinx-coroutines-core-1.8.1.pom (2.1 kB at 37 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-network-tls-certificates/2.3.8/ktor-network-tls-certificates-2.3.8.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-network-tls-certificates/2.3.8/ktor-network-tls-certificates-2.3.8.pom (1.9 kB at 37 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-server-call-logging/2.3.8/ktor-server-call-logging-2.3.8.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-server-call-logging/2.3.8/ktor-server-call-logging-2.3.8.pom (2.1 kB at 38 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-server-core/2.3.8/ktor-server-core-2.3.8.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-server-core/2.3.8/ktor-server-core-2.3.8.pom (3.0 kB at 41 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/atomicfu/0.19.0/atomicfu-0.19.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/atomicfu/0.19.0/atomicfu-0.19.0.pom (1.7 kB at 29 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/atomicfu-jvm/0.19.0/atomicfu-jvm-0.19.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/atomicfu-jvm/0.19.0/atomicfu-jvm-0.19.0.pom (1.8 kB at 31 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-utils/2.3.8/ktor-utils-2.3.8.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-utils/2.3.8/ktor-utils-2.3.8.pom (2.2 kB at 42 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-io/2.3.8/ktor-io-2.3.8.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-io/2.3.8/ktor-io-2.3.8.pom (2.1 kB at 35 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-http/2.3.8/ktor-http-2.3.8.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-http/2.3.8/ktor-http-2.3.8.pom (2.2 kB at 38 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-serialization/2.3.8/ktor-serialization-2.3.8.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-serialization/2.3.8/ktor-serialization-2.3.8.pom (2.4 kB at 38 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-websockets/2.3.8/ktor-websockets-2.3.8.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-websockets/2.3.8/ktor-websockets-2.3.8.pom (2.2 kB at 42 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-events/2.3.8/ktor-events-2.3.8.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-events/2.3.8/ktor-events-2.3.8.pom (2.4 kB at 45 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-data-redis/3.3.4/spring-boot-starter-data-redis-3.3.4.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-data-redis/3.3.4/spring-boot-starter-data-redis-3.3.4.jar (4.8 kB at 70 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/lettuce/lettuce-core/6.3.2.RELEASE/lettuce-core-6.3.2.RELEASE.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-redis/3.3.4/spring-data-redis-3.3.4.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-keyvalue/3.3.4/spring-data-keyvalue-3.3.4.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-oxm/6.1.13/spring-oxm-6.1.13.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/kafka/spring-kafka/3.2.4/spring-kafka-3.2.4.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-oxm/6.1.13/spring-oxm-6.1.13.jar (60 kB at 345 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-messaging/6.1.13/spring-messaging-6.1.13.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-keyvalue/3.3.4/spring-data-keyvalue-3.3.4.jar (136 kB at 696 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/retry/spring-retry/2.0.9/spring-retry-2.0.9.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/lettuce/lettuce-core/6.3.2.RELEASE/lettuce-core-6.3.2.RELEASE.jar (2.0 MB at 8.5 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-clients/3.7.1/kafka-clients-3.7.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/retry/spring-retry/2.0.9/spring-retry-2.0.9.jar (156 kB at 548 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/github/luben/zstd-jni/1.5.6-3/zstd-jni-1.5.6-3.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/kafka/spring-kafka/3.2.4/spring-kafka-3.2.4.jar (860 kB at 2.5 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/lz4/lz4-java/1.8.0/lz4-java-1.8.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-messaging/6.1.13/spring-messaging-6.1.13.jar (615 kB at 1.4 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-spring-boot3/2.2.0/resilience4j-spring-boot3-2.2.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/lz4/lz4-java/1.8.0/lz4-java-1.8.0.jar (683 kB at 1.5 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-spring6/2.2.0/resilience4j-spring6-2.2.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-spring-boot3/2.2.0/resilience4j-spring-boot3-2.2.0.jar (105 kB at 205 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-annotations/2.2.0/resilience4j-annotations-2.2.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-spring6/2.2.0/resilience4j-spring6-2.2.0.jar (124 kB at 235 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-consumer/2.2.0/resilience4j-consumer-2.2.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-clients/3.7.1/kafka-clients-3.7.1.jar (8.1 MB at 15 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-core/2.2.0/resilience4j-core-2.2.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-annotations/2.2.0/resilience4j-annotations-2.2.0.jar (11 kB at 20 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-circularbuffer/2.2.0/resilience4j-circularbuffer-2.2.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-consumer/2.2.0/resilience4j-consumer-2.2.0.jar (8.3 kB at 14 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-framework-common/2.2.0/resilience4j-framework-common-2.2.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-core/2.2.0/resilience4j-core-2.2.0.jar (78 kB at 129 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-micrometer/2.2.0/resilience4j-micrometer-2.2.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-circularbuffer/2.2.0/resilience4j-circularbuffer-2.2.0.jar (12 kB at 20 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-bulkhead/2.2.0/resilience4j-bulkhead-2.2.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-redis/3.3.4/spring-data-redis-3.3.4.jar (2.2 MB at 3.6 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-circuitbreaker/2.2.0/resilience4j-circuitbreaker-2.2.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-framework-common/2.2.0/resilience4j-framework-common-2.2.0.jar (99 kB at 158 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-retry/2.2.0/resilience4j-retry-2.2.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-bulkhead/2.2.0/resilience4j-bulkhead-2.2.0.jar (56 kB at 85 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-ratelimiter/2.2.0/resilience4j-ratelimiter-2.2.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-micrometer/2.2.0/resilience4j-micrometer-2.2.0.jar (77 kB at 114 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-timelimiter/2.2.0/resilience4j-timelimiter-2.2.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-circuitbreaker/2.2.0/resilience4j-circuitbreaker-2.2.0.jar (83 kB at 123 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/kafka/spring-kafka-test/3.2.4/spring-kafka-test-3.2.4.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-retry/2.2.0/resilience4j-retry-2.2.0.jar (49 kB at 72 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/zookeeper/zookeeper/3.8.4/zookeeper-3.8.4.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-ratelimiter/2.2.0/resilience4j-ratelimiter-2.2.0.jar (43 kB at 61 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/zookeeper/zookeeper-jute/3.8.4/zookeeper-jute-3.8.4.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/github/resilience4j/resilience4j-timelimiter/2.2.0/resilience4j-timelimiter-2.2.0.jar (27 kB at 37 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/yetus/audience-annotations/0.12.0/audience-annotations-0.12.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/kafka/spring-kafka-test/3.2.4/spring-kafka-test-3.2.4.jar (81 kB at 106 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/netty/netty-transport-native-epoll/4.1.113.Final/netty-transport-native-epoll-4.1.113.Final.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/github/luben/zstd-jni/1.5.6-3/zstd-jni-1.5.6-3.jar (6.7 MB at 8.8 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/netty/netty-transport-classes-epoll/4.1.113.Final/netty-transport-classes-epoll-4.1.113.Final.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/yetus/audience-annotations/0.12.0/audience-annotations-0.12.0.jar (21 kB at 26 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-clients/3.7.1/kafka-clients-3.7.1-test.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/zookeeper/zookeeper/3.8.4/zookeeper-3.8.4.jar (1.3 MB at 1.6 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-metadata/3.7.1/kafka-metadata-3.7.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/zookeeper/zookeeper-jute/3.8.4/zookeeper-jute-3.8.4.jar (255 kB at 312 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-raft/3.7.1/kafka-raft-3.7.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/netty/netty-transport-classes-epoll/4.1.113.Final/netty-transport-classes-epoll-4.1.113.Final.jar (148 kB at 181 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/netty/netty-transport-native-epoll/4.1.113.Final/netty-transport-native-epoll-4.1.113.Final.jar (6.1 kB at 7.5 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/yammer/metrics/metrics-core/2.2.0/metrics-core-2.2.0.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-server-common/3.7.1/kafka-server-common-3.7.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/yammer/metrics/metrics-core/2.2.0/metrics-core-2.2.0.jar (82 kB at 95 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/pcollections/pcollections/4.0.1/pcollections-4.0.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-metadata/3.7.1/kafka-metadata-3.7.1.jar (841 kB at 924 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-server-common/3.7.1/kafka-server-common-3.7.1-test.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-clients/3.7.1/kafka-clients-3.7.1-test.jar (2.4 MB at 2.6 MB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-server-common/3.7.1/kafka-server-common-3.7.1.jar (210 kB at 227 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-streams-test-utils/3.7.1/kafka-streams-test-utils-3.7.1.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-streams/3.7.1/kafka-streams-3.7.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-raft/3.7.1/kafka-raft-3.7.1.jar (204 kB at 220 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/rocksdb/rocksdbjni/7.9.2/rocksdbjni-7.9.2.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/pcollections/pcollections/4.0.1/pcollections-4.0.1.jar (74 kB at 79 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka_2.13/3.7.1/kafka_2.13-3.7.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-server-common/3.7.1/kafka-server-common-3.7.1-test.jar (136 kB at 140 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.13.12/scala-library-2.13.12.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-streams-test-utils/3.7.1/kafka-streams-test-utils-3.7.1.jar (54 kB at 55 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-group-coordinator/3.7.1/kafka-group-coordinator-3.7.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-group-coordinator/3.7.1/kafka-group-coordinator-3.7.1.jar (392 kB at 303 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-storage-api/3.7.1/kafka-storage-api-3.7.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka_2.13/3.7.1/kafka_2.13-3.7.1.jar (5.0 MB at 3.7 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-tools-api/3.7.1/kafka-tools-api-3.7.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-storage-api/3.7.1/kafka-storage-api-3.7.1.jar (27 kB at 19 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-storage/3.7.1/kafka-storage-3.7.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-streams/3.7.1/kafka-streams-3.7.1.jar (1.9 MB at 1.3 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/github/ben-manes/caffeine/caffeine/3.1.8/caffeine-3.1.8.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-tools-api/3.7.1/kafka-tools-api-3.7.1.jar (6.3 kB at 4.3 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-server/3.7.1/kafka-server-3.7.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-storage/3.7.1/kafka-storage-3.7.1.jar (358 kB at 237 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/sourceforge/argparse4j/argparse4j/0.7.0/argparse4j-0.7.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka-server/3.7.1/kafka-server-3.7.1.jar (41 kB at 26 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-validator/commons-validator/1.7/commons-validator-1.7.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/sourceforge/argparse4j/argparse4j/0.7.0/argparse4j-0.7.0.jar (90 kB at 56 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-digester/commons-digester/2.1/commons-digester-2.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-validator/commons-validator/1.7/commons-validator-1.7.jar (190 kB at 116 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-module-scala_2.13/2.17.2/jackson-module-scala_2.13-2.17.2.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/github/ben-manes/caffeine/caffeine/3.1.8/caffeine-3.1.8.jar (889 kB at 525 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/thoughtworks/paranamer/paranamer/2.8/paranamer-2.8.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/scala-lang/scala-library/2.13.12/scala-library-2.13.12.jar (5.9 MB at 3.5 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-csv/2.17.2/jackson-dataformat-csv-2.17.2.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-module-scala_2.13/2.17.2/jackson-module-scala_2.13-2.17.2.jar (521 kB at 302 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/bitbucket/b_c/jose4j/0.9.4/jose4j-0.9.4.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-digester/commons-digester/2.1/commons-digester-2.1.jar (197 kB at 113 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/scala-lang/modules/scala-collection-compat_2.13/2.10.0/scala-collection-compat_2.13-2.10.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/thoughtworks/paranamer/paranamer/2.8/paranamer-2.8.jar (35 kB at 20 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/scala-lang/modules/scala-java8-compat_2.13/1.0.2/scala-java8-compat_2.13-1.0.2.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-csv/2.17.2/jackson-dataformat-csv-2.17.2.jar (103 kB at 58 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/scala-lang/scala-reflect/2.13.12/scala-reflect-2.13.12.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/scala-lang/modules/scala-collection-compat_2.13/2.10.0/scala-collection-compat_2.13-2.10.0.jar (5.6 kB at 3.1 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/typesafe/scala-logging/scala-logging_2.13/3.9.4/scala-logging_2.13-3.9.4.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/bitbucket/b_c/jose4j/0.9.4/jose4j-0.9.4.jar (298 kB at 165 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/dropwizard/metrics/metrics-core/4.1.12.1/metrics-core-4.1.12.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/typesafe/scala-logging/scala-logging_2.13/3.9.4/scala-logging_2.13-3.9.4.jar (59 kB at 32 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-cli/commons-cli/1.4/commons-cli-1.4.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/scala-lang/modules/scala-java8-compat_2.13/1.0.2/scala-java8-compat_2.13-1.0.2.jar (640 kB at 340 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka_2.13/3.7.1/kafka_2.13-3.7.1-test.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/dropwizard/metrics/metrics-core/4.1.12.1/metrics-core-4.1.12.1.jar (105 kB at 55 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/testcontainers/kafka/1.20.2/kafka-1.20.2.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-cli/commons-cli/1.4/commons-cli-1.4.jar (54 kB at 28 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/testcontainers/toxiproxy/1.20.2/toxiproxy-1.20.2.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/testcontainers/kafka/1.20.2/kafka-1.20.2.jar (17 kB at 8.2 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/eu/rekawek/toxiproxy/toxiproxy-java/2.1.7/toxiproxy-java-2.1.7.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/eu/rekawek/toxiproxy/toxiproxy-java/2.1.7/toxiproxy-java-2.1.7.jar (28 kB at 13 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/wiremock/wiremock-standalone/3.9.1/wiremock-standalone-3.9.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/testcontainers/toxiproxy/1.20.2/toxiproxy-1.20.2.jar (4.7 kB at 2.0 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/au/com/dius/pact/consumer/junit5/4.6.14/junit5-4.6.14.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/au/com/dius/pact/consumer/junit5/4.6.14/junit5-4.6.14.jar (70 kB at 27 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/au/com/dius/pact/consumer/4.6.14/consumer-4.6.14.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/kafka/kafka_2.13/3.7.1/kafka_2.13-3.7.1-test.jar (5.6 MB at 2.2 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/json/json/20240205/json-20240205.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/scala-lang/scala-reflect/2.13.12/scala-reflect-2.13.12.jar (3.8 MB at 1.4 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/googlecode/java-diff-utils/diffutils/1.3.0/diffutils-1.3.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/json/json/20240205/json-20240205.jar (78 kB at 28 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-server-netty/2.3.8/ktor-server-netty-2.3.8.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/googlecode/java-diff-utils/diffutils/1.3.0/diffutils-1.3.0.jar (34 kB at 12 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core/1.8.1/kotlinx-coroutines-core-1.8.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/rocksdb/rocksdbjni/7.9.2/rocksdbjni-7.9.2.jar (58 MB at 19 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-network-tls-certificates/2.3.8/ktor-network-tls-certificates-2.3.8.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/wiremock/wiremock-standalone/3.9.1/wiremock-standalone-3.9.1.jar (17 MB at 5.7 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-server-call-logging/2.3.8/ktor-server-call-logging-2.3.8.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core/1.8.1/kotlinx-coroutines-core-1.8.1.jar (86 kB at 29 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-server-core/2.3.8/ktor-server-core-2.3.8.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-network-tls-certificates/2.3.8/ktor-network-tls-certificates-2.3.8.jar (690 B at 225 B/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/atomicfu/0.19.0/atomicfu-0.19.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-server-core/2.3.8/ktor-server-core-2.3.8.jar (43 kB at 14 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/atomicfu-jvm/0.19.0/atomicfu-jvm-0.19.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-server-call-logging/2.3.8/ktor-server-call-logging-2.3.8.jar (705 B at 229 B/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-utils/2.3.8/ktor-utils-2.3.8.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/atomicfu/0.19.0/atomicfu-0.19.0.jar (9.3 kB at 3.0 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-io/2.3.8/ktor-io-2.3.8.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/au/com/dius/pact/consumer/4.6.14/consumer-4.6.14.jar (454 kB at 146 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-http/2.3.8/ktor-http-2.3.8.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/atomicfu-jvm/0.19.0/atomicfu-jvm-0.19.0.jar (36 kB at 12 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-serialization/2.3.8/ktor-serialization-2.3.8.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-utils/2.3.8/ktor-utils-2.3.8.jar (57 kB at 18 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-websockets/2.3.8/ktor-websockets-2.3.8.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-io/2.3.8/ktor-io-2.3.8.jar (57 kB at 18 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-events/2.3.8/ktor-events-2.3.8.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-server-netty/2.3.8/ktor-server-netty-2.3.8.jar (690 B at 217 B/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-websockets/2.3.8/ktor-websockets-2.3.8.jar (13 kB at 4.2 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-http/2.3.8/ktor-http-2.3.8.jar (34 kB at 11 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-serialization/2.3.8/ktor-serialization-2.3.8.jar (5.2 kB at 1.6 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/ktor/ktor-events/2.3.8/ktor-events-2.3.8.jar (4.4 kB at 1.4 kB/s)
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ ms-reservas ---
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (preparar-agente) @ ms-reservas ---
+[INFO] argLine set to -javaagent:/home/cadel/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=/home/cadel/Escritorio/mediturno/entrega-3/ms-reservas/target/jacoco.exec
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ ms-reservas ---
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] Copying 8 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ ms-reservas ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 72 source files with javac [debug parameters release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ ms-reservas ---
+[INFO] skip non existing resourceDirectory /home/cadel/Escritorio/mediturno/entrega-3/ms-reservas/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ ms-reservas ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 5 source files with javac [debug parameters release 17] to target/test-classes
+[INFO] /home/cadel/Escritorio/mediturno/entrega-3/ms-reservas/src/test/java/cl/losandes/mediturno/reservas/plomeria/BaseDePlomeria.java: /home/cadel/Escritorio/mediturno/entrega-3/ms-reservas/src/test/java/cl/losandes/mediturno/reservas/plomeria/BaseDePlomeria.java uses or overrides a deprecated API.
+[INFO] /home/cadel/Escritorio/mediturno/entrega-3/ms-reservas/src/test/java/cl/losandes/mediturno/reservas/plomeria/BaseDePlomeria.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ ms-reservas ---
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ ms-reservas ---
+[INFO] Building jar: /home/cadel/Escritorio/mediturno/entrega-3/ms-reservas/target/ms-reservas-2.1.0.jar
+[INFO] 
+[INFO] --- spring-boot:3.3.4:repackage (repackage) @ ms-reservas ---
+[INFO] Replacing main artifact /home/cadel/Escritorio/mediturno/entrega-3/ms-reservas/target/ms-reservas-2.1.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /home/cadel/Escritorio/mediturno/entrega-3/ms-reservas/target/ms-reservas-2.1.0.jar.original
+[INFO] 
+[INFO] --- spring-boot:3.3.4:repackage (default) @ ms-reservas ---
+[INFO] Replacing main artifact /home/cadel/Escritorio/mediturno/entrega-3/ms-reservas/target/ms-reservas-2.1.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /home/cadel/Escritorio/mediturno/entrega-3/ms-reservas/target/ms-reservas-2.1.0.jar.original
+[INFO] 
+[INFO] --- failsafe:3.2.5:integration-test (default) @ ms-reservas ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+Nov 18, 2026 12:23:25 PM org.junit.platform.launcher.core.LauncherConfigurationParameters loadClasspathResource
+WARNING: Discovered 2 'junit-platform.properties' configuration files in the classpath; only the first will be used.
+Nov 18, 2026 12:23:25 PM org.junit.platform.launcher.core.LauncherConfigurationParameters loadClasspathResource
+WARNING: Discovered 2 'junit-platform.properties' configuration files in the classpath; only the first will be used.
+Nov 18, 2026 12:23:27 PM org.junit.platform.launcher.core.LauncherConfigurationParameters loadClasspathResource
+WARNING: Discovered 2 'junit-platform.properties' configuration files in the classpath; only the first will be used.
+Nov 18, 2026 12:23:27 PM org.junit.platform.launcher.core.LauncherConfigurationParameters loadClasspathResource
+WARNING: Discovered 2 'junit-platform.properties' configuration files in the classpath; only the first will be used.
+Nov 18, 2026 12:23:27 PM org.junit.platform.launcher.core.LauncherConfigurationParameters loadClasspathResource
+WARNING: Discovered 2 'junit-platform.properties' configuration files in the classpath; only the first will be used.
+Nov 18, 2026 12:23:27 PM org.junit.platform.launcher.core.LauncherConfigurationParameters loadClasspathResource
+WARNING: Discovered 2 'junit-platform.properties' configuration files in the classpath; only the first will be used.
+Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+[INFO] Running cl.losandes.mediturno.reservas.plomeria.ContextoLevantaIT
+12:23:27.703 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [cl.losandes.mediturno.reservas.plomeria.ContextoLevantaIT]: ContextoLevantaIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+12:23:27.839 [main] INFO org.testcontainers.images.PullPolicy -- Image pull policy will be performed by: DefaultPullPolicy()
+12:23:27.848 [main] INFO org.testcontainers.utility.ImageNameSubstitutor -- Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+12:23:27.876 [testcontainers-lifecycle-0] INFO org.testcontainers.DockerClientFactory -- Testcontainers version: 1.20.2
+12:23:29.147 [testcontainers-lifecycle-0] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Found Docker environment with Environment variables, system properties and defaults. Resolved dockerHost=unix:///var/run/docker.sock
+12:23:29.150 [testcontainers-lifecycle-0] INFO org.testcontainers.DockerClientFactory -- Docker host IP address is localhost
+12:23:29.185 [testcontainers-lifecycle-0] INFO org.testcontainers.DockerClientFactory -- Connected to docker: 
+  Server Version: 29.5.3
+  API Version: 1.54
+  Operating System: Fedora Linux 42 (Workstation Edition)
+  Total Memory: 15669 MB
+12:23:29.304 [testcontainers-lifecycle-0] INFO tc.testcontainers/ryuk:0.9.0 -- Creating container for image: testcontainers/ryuk:0.9.0
+12:23:29.840 [testcontainers-lifecycle-0] INFO tc.testcontainers/ryuk:0.9.0 -- Container testcontainers/ryuk:0.9.0 is starting: de603ac4e62eb7790b3fcee84b2ca976594fd563291a6d1ea7884db413aa3b49
+12:23:30.349 [testcontainers-lifecycle-0] INFO tc.testcontainers/ryuk:0.9.0 -- Container testcontainers/ryuk:0.9.0 started in PT1.044773295S
+12:23:30.358 [testcontainers-lifecycle-0] INFO org.testcontainers.utility.RyukResourceReaper -- Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+12:23:30.359 [testcontainers-lifecycle-0] INFO org.testcontainers.DockerClientFactory -- Checking the system...
+12:23:30.361 [testcontainers-lifecycle-0] INFO org.testcontainers.DockerClientFactory -- ✔︎ Docker server version should be at least 1.6.0
+12:23:30.362 [testcontainers-lifecycle-0] INFO tc.postgres:16-alpine -- Creating container for image: postgres:16-alpine
+12:23:30.362 [testcontainers-lifecycle-1] INFO tc.redis:7-alpine -- Creating container for image: redis:7-alpine
+12:23:30.390 [testcontainers-lifecycle-2] INFO tc.confluentinc/cp-kafka:7.7.0 -- Pulling docker image: confluentinc/cp-kafka:7.7.0. Please be patient; this may take some time but only needs to be done once.
+12:23:30.465 [testcontainers-lifecycle-1] INFO tc.redis:7-alpine -- Container redis:7-alpine is starting: 3a0e08d4933f3e5fccd1cb3ea3402c74277137c5bdbc063e6979b381a3da17f2
+12:23:30.466 [testcontainers-lifecycle-0] INFO tc.postgres:16-alpine -- Container postgres:16-alpine is starting: dd07f62eb57de514dbfa5a0327fc82c63b1b14b507da799589d23323da06a111
+12:23:30.990 [testcontainers-lifecycle-1] INFO tc.redis:7-alpine -- Container redis:7-alpine started in PT0.627979962S
+12:23:31.961 [docker-java-stream-504298648] INFO tc.confluentinc/cp-kafka:7.7.0 -- Starting to pull image
+12:23:31.995 [docker-java-stream-504298648] INFO tc.confluentinc/cp-kafka:7.7.0 -- Pulling image layers:  0 pending,  0 downloaded,  0 extracted, (0 bytes/0 bytes)
+12:23:32.701 [docker-java-stream-504298648] INFO tc.confluentinc/cp-kafka:7.7.0 -- Pulling image layers: 12 pending,  1 downloaded,  0 extracted, (1 KB/? MB)
+12:23:34.084 [testcontainers-lifecycle-0] INFO tc.postgres:16-alpine -- Container postgres:16-alpine started in PT3.722348676S
+12:23:34.085 [testcontainers-lifecycle-0] INFO tc.postgres:16-alpine -- Container is started (JDBC URL: jdbc:postgresql://localhost:32778/mediturno_reservas?loggerLevel=OFF)
+12:23:34.193 [docker-java-stream-504298648] INFO tc.confluentinc/cp-kafka:7.7.0 -- Pulling image layers: 11 pending,  2 downloaded,  0 extracted, (54 MB/? MB)
+12:23:34.432 [docker-java-stream-504298648] INFO tc.confluentinc/cp-kafka:7.7.0 -- Pulling image layers: 10 pending,  3 downloaded,  0 extracted, (65 MB/? MB)
+12:23:34.574 [docker-java-stream-504298648] INFO tc.confluentinc/cp-kafka:7.7.0 -- Pulling image layers:  9 pending,  4 downloaded,  0 extracted, (72 MB/? MB)
+12:23:34.887 [docker-java-stream-504298648] INFO tc.confluentinc/cp-kafka:7.7.0 -- Pulling image layers:  8 pending,  5 downloaded,  0 extracted, (80 MB/? MB)
+12:23:35.203 [docker-java-stream-504298648] INFO tc.confluentinc/cp-kafka:7.7.0 -- Pulling image layers:  7 pending,  6 downloaded,  0 extracted, (90 MB/? MB)
+12:23:35.451 [docker-java-stream-504298648] INFO tc.confluentinc/cp-kafka:7.7.0 -- Pulling image layers:  6 pending,  7 downloaded,  0 extracted, (109 MB/? MB)
+12:23:35.670 [docker-java-stream-504298648] INFO tc.confluentinc/cp-kafka:7.7.0 -- Pulling image layers:  6 pending,  7 downloaded,  1 extracted, (118 MB/? MB)
+12:23:35.708 [docker-java-stream-504298648] INFO tc.confluentinc/cp-kafka:7.7.0 -- Pulling image layers:  5 pending,  8 downloaded,  1 extracted, (118 MB/? MB)
+12:23:36.113 [docker-java-stream-504298648] INFO tc.confluentinc/cp-kafka:7.7.0 -- Pulling image layers:  4 pending,  9 downloaded,  1 extracted, (141 MB/? MB)
+12:23:36.130 [docker-java-stream-504298648] INFO tc.confluentinc/cp-kafka:7.7.0 -- Pulling image layers:  3 pending, 10 downloaded,  1 extracted, (142 MB/? MB)
+12:23:36.338 [docker-java-stream-504298648] INFO tc.confluentinc/cp-kafka:7.7.0 -- Pulling image layers:  2 pending, 11 downloaded,  1 extracted, (147 MB/? MB)
+12:23:39.964 [docker-java-stream-504298648] INFO tc.confluentinc/cp-kafka:7.7.0 -- Pulling image layers:  1 pending, 12 downloaded,  1 extracted, (304 MB/? MB)
+12:23:47.134 [docker-java-stream-504298648] INFO tc.confluentinc/cp-kafka:7.7.0 -- Pulling image layers:  0 pending, 13 downloaded,  1 extracted, (444 MB/446 MB)
+12:24:22.432 [docker-java-stream-504298648] INFO tc.confluentinc/cp-kafka:7.7.0 -- Pulling image layers:  0 pending, 13 downloaded,  2 extracted, (445 MB/446 MB)
+12:24:23.071 [docker-java-stream-504298648] INFO tc.confluentinc/cp-kafka:7.7.0 -- Pulling image layers:  0 pending, 13 downloaded,  3 extracted, (445 MB/446 MB)
+12:24:23.254 [docker-java-stream-504298648] INFO tc.confluentinc/cp-kafka:7.7.0 -- Pulling image layers:  0 pending, 13 downloaded,  4 extracted, (445 MB/446 MB)
+12:24:23.425 [docker-java-stream-504298648] INFO tc.confluentinc/cp-kafka:7.7.0 -- Pulling image layers:  0 pending, 13 downloaded,  5 extracted, (445 MB/446 MB)
+12:24:23.921 [docker-java-stream-504298648] INFO tc.confluentinc/cp-kafka:7.7.0 -- Pulling image layers:  0 pending, 13 downloaded,  6 extracted, (446 MB/446 MB)
+12:24:23.944 [docker-java-stream-504298648] INFO tc.confluentinc/cp-kafka:7.7.0 -- Pulling image layers:  0 pending, 13 downloaded,  7 extracted, (446 MB/446 MB)
+12:24:23.971 [docker-java-stream-504298648] INFO tc.confluentinc/cp-kafka:7.7.0 -- Pulling image layers:  0 pending, 13 downloaded,  8 extracted, (446 MB/446 MB)
+12:24:23.991 [docker-java-stream-504298648] INFO tc.confluentinc/cp-kafka:7.7.0 -- Pulling image layers:  0 pending, 13 downloaded,  9 extracted, (446 MB/446 MB)
+12:24:24.013 [docker-java-stream-504298648] INFO tc.confluentinc/cp-kafka:7.7.0 -- Pulling image layers:  0 pending, 13 downloaded, 10 extracted, (446 MB/446 MB)
+12:24:24.039 [docker-java-stream-504298648] INFO tc.confluentinc/cp-kafka:7.7.0 -- Pulling image layers:  0 pending, 13 downloaded, 11 extracted, (446 MB/446 MB)
+12:24:25.103 [docker-java-stream-504298648] INFO tc.confluentinc/cp-kafka:7.7.0 -- Pulling image layers:  0 pending, 13 downloaded, 12 extracted, (446 MB/446 MB)
+12:24:25.128 [docker-java-stream-504298648] INFO tc.confluentinc/cp-kafka:7.7.0 -- Pulling image layers:  0 pending, 13 downloaded, 13 extracted, (446 MB/446 MB)
+12:24:25.158 [docker-java-stream-504298648] INFO tc.confluentinc/cp-kafka:7.7.0 -- Pull complete. 13 layers, pulled in 53s (downloaded 446 MB at 8 MB/s)
+12:24:25.158 [testcontainers-lifecycle-2] INFO tc.confluentinc/cp-kafka:7.7.0 -- Image confluentinc/cp-kafka:7.7.0 pull took PT54.767582673S
+12:24:25.167 [testcontainers-lifecycle-2] INFO tc.confluentinc/cp-kafka:7.7.0 -- Creating container for image: confluentinc/cp-kafka:7.7.0
+12:24:25.696 [testcontainers-lifecycle-2] INFO tc.confluentinc/cp-kafka:7.7.0 -- Container confluentinc/cp-kafka:7.7.0 is starting: 78968a3ecece3f905839cea0ad1d00b7b98f88844a599d0484f4c1fbc9388681
+12:24:32.810 [testcontainers-lifecycle-2] INFO tc.confluentinc/cp-kafka:7.7.0 -- Container confluentinc/cp-kafka:7.7.0 started in PT7.642248881S
+12:24:33.122 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration cl.losandes.mediturno.reservas.MsReservasApplication for test class cl.losandes.mediturno.reservas.plomeria.ContextoLevantaIT
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2026-11-18T12:24:34.245-03:00  WARN 97666 --- [ms-reservas] [           main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/cadel/.m2/repository/org/json/json/20240205/json-20240205.jar!/org/json/JSONObject.class
+	jar:file:/home/cadel/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2026-11-18T12:24:34.272-03:00  INFO 97666 --- [ms-reservas] [           main] c.l.m.r.plomeria.ContextoLevantaIT       : Starting ContextoLevantaIT using Java 21.0.11 with PID 97666 (started by cadel in /home/cadel/Escritorio/mediturno/entrega-3/ms-reservas)
+2026-11-18T12:24:34.273-03:00  INFO 97666 --- [ms-reservas] [           main] c.l.m.r.plomeria.ContextoLevantaIT       : The following 1 profile is active: "plomeria"
+2026-11-18T12:24:38.139-03:00  INFO 97666 --- [ms-reservas] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-11-18T12:24:38.143-03:00  INFO 97666 --- [ms-reservas] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-18T12:24:38.419-03:00  INFO 97666 --- [ms-reservas] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 262 ms. Found 2 JPA repository interfaces.
+2026-11-18T12:24:38.452-03:00  INFO 97666 --- [ms-reservas] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-11-18T12:24:38.455-03:00  INFO 97666 --- [ms-reservas] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-11-18T12:24:38.483-03:00  INFO 97666 --- [ms-reservas] [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cl.losandes.mediturno.reservas.infraestructura.PacienteJpaRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-11-18T12:24:38.483-03:00  INFO 97666 --- [ms-reservas] [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cl.losandes.mediturno.reservas.infraestructura.ReservaJpaRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-11-18T12:24:38.484-03:00  INFO 97666 --- [ms-reservas] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2026-11-18T12:24:40.716-03:00  INFO 97666 --- [ms-reservas] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2026-11-18T12:24:40.745-03:00  INFO 97666 --- [ms-reservas] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-18T12:24:40.745-03:00  INFO 97666 --- [ms-reservas] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2026-11-18T12:24:40.851-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-18T12:24:40.852-03:00  INFO 97666 --- [ms-reservas] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6068 ms
+Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+2026-11-18T12:24:41.734-03:00  INFO 97666 --- [ms-reservas] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-18T12:24:41.842-03:00  INFO 97666 --- [ms-reservas] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-11-18T12:24:41.911-03:00  INFO 97666 --- [ms-reservas] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-18T12:24:42.554-03:00  INFO 97666 --- [ms-reservas] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-18T12:24:42.622-03:00  INFO 97666 --- [ms-reservas] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-18T12:24:43.007-03:00  INFO 97666 --- [ms-reservas] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3b97b2ae
+2026-11-18T12:24:43.010-03:00  INFO 97666 --- [ms-reservas] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-18T12:24:46.238-03:00  INFO 97666 --- [ms-reservas] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-18T12:24:46.330-03:00  WARN 97666 --- [ms-reservas] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2026-11-18T12:24:46.331-03:00  WARN 97666 --- [ms-reservas] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "paciente" does not exist, skipping
+2026-11-18T12:24:46.334-03:00  WARN 97666 --- [ms-reservas] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2026-11-18T12:24:46.334-03:00  WARN 97666 --- [ms-reservas] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "reserva" does not exist, skipping
+2026-11-18T12:24:46.397-03:00  INFO 97666 --- [ms-reservas] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-18T12:24:47.347-03:00  INFO 97666 --- [ms-reservas] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-18T12:24:54.214-03:00  INFO 97666 --- [ms-reservas] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoints beneath base path '/actuator'
+2026-11-18T12:24:54.737-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.controllers = []
+	bootstrap.servers = [PLAINTEXT://localhost:32781]
+	client.dns.lookup = use_all_dns_ips
+	client.id = ms-reservas-admin-0
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	enable.metrics.push = true
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2026-11-18T12:24:54.990-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
+2026-11-18T12:24:54.990-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
+2026-11-18T12:24:54.991-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1795015494988
+2026-11-18T12:24:56.540-03:00  INFO 97666 --- [ms-reservas] [eservas-admin-0] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for ms-reservas-admin-0 unregistered
+2026-11-18T12:24:56.547-03:00  INFO 97666 --- [ms-reservas] [eservas-admin-0] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2026-11-18T12:24:56.547-03:00  INFO 97666 --- [ms-reservas] [eservas-admin-0] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-11-18T12:24:56.548-03:00  INFO 97666 --- [ms-reservas] [eservas-admin-0] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2026-11-18T12:24:56.579-03:00  INFO 97666 --- [ms-reservas] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 43021 (http) with context path '/'
+2026-11-18T12:24:56.631-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [PLAINTEXT://localhost:32781]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-ms-reservas-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = ms-reservas
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2026-11-18T12:24:56.710-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-11-18T12:24:56.813-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
+2026-11-18T12:24:56.813-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
+2026-11-18T12:24:56.814-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1795015496813
+2026-11-18T12:24:56.833-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Subscribed to topic(s): mediturno.pagos.confirmaciones
+2026-11-18T12:24:56.874-03:00  INFO 97666 --- [ms-reservas] [           main] c.l.m.r.plomeria.ContextoLevantaIT       : Started ContextoLevantaIT in 23.432 seconds (process running for 92.152)
+2026-11-18T12:24:56.877-03:00  INFO 97666 --- [ms-reservas] [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Cluster ID: sA_3kxgtSuaKBmQ6XKrofQ
+2026-11-18T12:24:57.030-03:00  INFO 97666 --- [ms-reservas] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Discovered group coordinator localhost:32781 (id: 2147483646 rack: null)
+2026-11-18T12:24:57.036-03:00  INFO 97666 --- [ms-reservas] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] (Re-)joining group
+2026-11-18T12:24:57.091-03:00  INFO 97666 --- [ms-reservas] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Request joining group due to: need to re-join with the given member-id: consumer-ms-reservas-1-5f7826e3-cb7f-401e-9cc3-e1f5b68cc564
+2026-11-18T12:24:57.092-03:00  INFO 97666 --- [ms-reservas] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] (Re-)joining group
+2026-11-18T12:24:57.119-03:00  INFO 97666 --- [ms-reservas] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Successfully joined group with generation Generation{generationId=1, memberId='consumer-ms-reservas-1-5f7826e3-cb7f-401e-9cc3-e1f5b68cc564', protocol='range'}
+2026-11-18T12:24:57.131-03:00  INFO 97666 --- [ms-reservas] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Finished assignment for group at generation 1: {consumer-ms-reservas-1-5f7826e3-cb7f-401e-9cc3-e1f5b68cc564=Assignment(partitions=[mediturno.pagos.confirmaciones-0, mediturno.pagos.confirmaciones-1, mediturno.pagos.confirmaciones-2])}
+2026-11-18T12:24:57.198-03:00  INFO 97666 --- [ms-reservas] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Successfully synced group in generation Generation{generationId=1, memberId='consumer-ms-reservas-1-5f7826e3-cb7f-401e-9cc3-e1f5b68cc564', protocol='range'}
+2026-11-18T12:24:57.199-03:00  INFO 97666 --- [ms-reservas] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Notifying assignor about the new Assignment(partitions=[mediturno.pagos.confirmaciones-0, mediturno.pagos.confirmaciones-1, mediturno.pagos.confirmaciones-2])
+2026-11-18T12:24:57.203-03:00  INFO 97666 --- [ms-reservas] [ntainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Adding newly assigned partitions: mediturno.pagos.confirmaciones-0, mediturno.pagos.confirmaciones-1, mediturno.pagos.confirmaciones-2
+2026-11-18T12:24:57.225-03:00  INFO 97666 --- [ms-reservas] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Found no committed offset for partition mediturno.pagos.confirmaciones-0
+2026-11-18T12:24:57.226-03:00  INFO 97666 --- [ms-reservas] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Found no committed offset for partition mediturno.pagos.confirmaciones-1
+2026-11-18T12:24:57.226-03:00  INFO 97666 --- [ms-reservas] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Found no committed offset for partition mediturno.pagos.confirmaciones-2
+2026-11-18T12:24:57.250-03:00  INFO 97666 --- [ms-reservas] [ntainer#0-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Resetting offset for partition mediturno.pagos.confirmaciones-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:32781 (id: 1 rack: null)], epoch=0}}.
+2026-11-18T12:24:57.251-03:00  INFO 97666 --- [ms-reservas] [ntainer#0-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Resetting offset for partition mediturno.pagos.confirmaciones-1 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:32781 (id: 1 rack: null)], epoch=0}}.
+2026-11-18T12:24:57.251-03:00  INFO 97666 --- [ms-reservas] [ntainer#0-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Resetting offset for partition mediturno.pagos.confirmaciones-2 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:32781 (id: 1 rack: null)], epoch=0}}.
+2026-11-18T12:24:57.252-03:00  INFO 97666 --- [ms-reservas] [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : ms-reservas: partitions assigned: [mediturno.pagos.confirmaciones-0, mediturno.pagos.confirmaciones-1, mediturno.pagos.confirmaciones-2]
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (/home/cadel/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.19/byte-buddy-agent-1.14.19.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 90.59 s -- in cl.losandes.mediturno.reservas.plomeria.ContextoLevantaIT
+[INFO] Running cl.losandes.mediturno.reservas.plomeria.KafkaRespondeIT
+2026-11-18T12:24:58.033-03:00  INFO 97666 --- [ms-reservas] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [cl.losandes.mediturno.reservas.plomeria.KafkaRespondeIT]: KafkaRespondeIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-18T12:24:58.041-03:00  INFO 97666 --- [ms-reservas] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration cl.losandes.mediturno.reservas.MsReservasApplication for test class cl.losandes.mediturno.reservas.plomeria.KafkaRespondeIT
+2026-11-18T12:24:58.056-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.controllers = []
+	bootstrap.servers = [PLAINTEXT://localhost:32781]
+	client.dns.lookup = use_all_dns_ips
+	client.id = ms-reservas-admin-1
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	enable.metrics.push = true
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2026-11-18T12:24:58.061-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
+2026-11-18T12:24:58.061-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
+2026-11-18T12:24:58.061-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1795015498061
+2026-11-18T12:24:58.084-03:00  INFO 97666 --- [ms-reservas] [eservas-admin-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for ms-reservas-admin-1 unregistered
+2026-11-18T12:24:58.087-03:00  INFO 97666 --- [ms-reservas] [eservas-admin-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2026-11-18T12:24:58.087-03:00  INFO 97666 --- [ms-reservas] [eservas-admin-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-11-18T12:24:58.087-03:00  INFO 97666 --- [ms-reservas] [eservas-admin-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2026-11-18T12:24:58.141-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [PLAINTEXT://localhost:32781]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = ms-reservas-producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 15000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 5000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2026-11-18T12:24:58.143-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-11-18T12:24:58.160-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=ms-reservas-producer-1] Instantiated an idempotent producer.
+2026-11-18T12:24:58.188-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
+2026-11-18T12:24:58.189-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
+2026-11-18T12:24:58.189-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1795015498188
+2026-11-18T12:24:58.200-03:00  INFO 97666 --- [ms-reservas] [rvas-producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=ms-reservas-producer-1] Cluster ID: sA_3kxgtSuaKBmQ6XKrofQ
+2026-11-18T12:24:58.309-03:00  WARN 97666 --- [ms-reservas] [rvas-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=ms-reservas-producer-1] Error while fetching metadata with correlation id 5 : {mediturno.plomeria=LEADER_NOT_AVAILABLE}
+2026-11-18T12:24:58.313-03:00  INFO 97666 --- [ms-reservas] [rvas-producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=ms-reservas-producer-1] ProducerId set to 0 with epoch 0
+2026-11-18T12:24:58.460-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [PLAINTEXT://localhost:32781]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-plomeria-83333d97-882e-4530-b62f-b7356a3baf0a-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = plomeria-83333d97-882e-4530-b62f-b7356a3baf0a
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2026-11-18T12:24:58.461-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-11-18T12:24:58.467-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
+2026-11-18T12:24:58.468-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
+2026-11-18T12:24:58.468-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1795015498467
+2026-11-18T12:24:58.468-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-plomeria-83333d97-882e-4530-b62f-b7356a3baf0a-2, groupId=plomeria-83333d97-882e-4530-b62f-b7356a3baf0a] Subscribed to topic(s): mediturno.plomeria
+2026-11-18T12:24:58.477-03:00  INFO 97666 --- [ms-reservas] [           main] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-plomeria-83333d97-882e-4530-b62f-b7356a3baf0a-2, groupId=plomeria-83333d97-882e-4530-b62f-b7356a3baf0a] Cluster ID: sA_3kxgtSuaKBmQ6XKrofQ
+2026-11-18T12:24:58.478-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-plomeria-83333d97-882e-4530-b62f-b7356a3baf0a-2, groupId=plomeria-83333d97-882e-4530-b62f-b7356a3baf0a] Discovered group coordinator localhost:32781 (id: 2147483646 rack: null)
+2026-11-18T12:24:58.485-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-plomeria-83333d97-882e-4530-b62f-b7356a3baf0a-2, groupId=plomeria-83333d97-882e-4530-b62f-b7356a3baf0a] (Re-)joining group
+2026-11-18T12:24:58.490-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-plomeria-83333d97-882e-4530-b62f-b7356a3baf0a-2, groupId=plomeria-83333d97-882e-4530-b62f-b7356a3baf0a] Request joining group due to: need to re-join with the given member-id: consumer-plomeria-83333d97-882e-4530-b62f-b7356a3baf0a-2-3893abcd-ed01-4687-a43f-cd8f2de972d2
+2026-11-18T12:24:58.491-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-plomeria-83333d97-882e-4530-b62f-b7356a3baf0a-2, groupId=plomeria-83333d97-882e-4530-b62f-b7356a3baf0a] (Re-)joining group
+2026-11-18T12:24:58.496-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-plomeria-83333d97-882e-4530-b62f-b7356a3baf0a-2, groupId=plomeria-83333d97-882e-4530-b62f-b7356a3baf0a] Successfully joined group with generation Generation{generationId=1, memberId='consumer-plomeria-83333d97-882e-4530-b62f-b7356a3baf0a-2-3893abcd-ed01-4687-a43f-cd8f2de972d2', protocol='range'}
+2026-11-18T12:24:58.496-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-plomeria-83333d97-882e-4530-b62f-b7356a3baf0a-2, groupId=plomeria-83333d97-882e-4530-b62f-b7356a3baf0a] Finished assignment for group at generation 1: {consumer-plomeria-83333d97-882e-4530-b62f-b7356a3baf0a-2-3893abcd-ed01-4687-a43f-cd8f2de972d2=Assignment(partitions=[mediturno.plomeria-0])}
+2026-11-18T12:24:58.503-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-plomeria-83333d97-882e-4530-b62f-b7356a3baf0a-2, groupId=plomeria-83333d97-882e-4530-b62f-b7356a3baf0a] Successfully synced group in generation Generation{generationId=1, memberId='consumer-plomeria-83333d97-882e-4530-b62f-b7356a3baf0a-2-3893abcd-ed01-4687-a43f-cd8f2de972d2', protocol='range'}
+2026-11-18T12:24:58.504-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-plomeria-83333d97-882e-4530-b62f-b7356a3baf0a-2, groupId=plomeria-83333d97-882e-4530-b62f-b7356a3baf0a] Notifying assignor about the new Assignment(partitions=[mediturno.plomeria-0])
+2026-11-18T12:24:58.504-03:00  INFO 97666 --- [ms-reservas] [           main] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-plomeria-83333d97-882e-4530-b62f-b7356a3baf0a-2, groupId=plomeria-83333d97-882e-4530-b62f-b7356a3baf0a] Adding newly assigned partitions: mediturno.plomeria-0
+2026-11-18T12:24:58.507-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-plomeria-83333d97-882e-4530-b62f-b7356a3baf0a-2, groupId=plomeria-83333d97-882e-4530-b62f-b7356a3baf0a] Found no committed offset for partition mediturno.plomeria-0
+2026-11-18T12:24:58.515-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-plomeria-83333d97-882e-4530-b62f-b7356a3baf0a-2, groupId=plomeria-83333d97-882e-4530-b62f-b7356a3baf0a] Resetting offset for partition mediturno.plomeria-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:32781 (id: 1 rack: null)], epoch=0}}.
+2026-11-18T12:24:58.583-03:00  INFO 97666 --- [ms-reservas] [           main] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-plomeria-83333d97-882e-4530-b62f-b7356a3baf0a-2, groupId=plomeria-83333d97-882e-4530-b62f-b7356a3baf0a] Revoke previously assigned partitions mediturno.plomeria-0
+2026-11-18T12:24:58.583-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-plomeria-83333d97-882e-4530-b62f-b7356a3baf0a-2, groupId=plomeria-83333d97-882e-4530-b62f-b7356a3baf0a] Member consumer-plomeria-83333d97-882e-4530-b62f-b7356a3baf0a-2-3893abcd-ed01-4687-a43f-cd8f2de972d2 sending LeaveGroup request to coordinator localhost:32781 (id: 2147483646 rack: null) due to the consumer is being closed
+2026-11-18T12:24:58.584-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-plomeria-83333d97-882e-4530-b62f-b7356a3baf0a-2, groupId=plomeria-83333d97-882e-4530-b62f-b7356a3baf0a] Resetting generation and member id due to: consumer pro-actively leaving the group
+2026-11-18T12:24:58.585-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-plomeria-83333d97-882e-4530-b62f-b7356a3baf0a-2, groupId=plomeria-83333d97-882e-4530-b62f-b7356a3baf0a] Request joining group due to: consumer pro-actively leaving the group
+2026-11-18T12:24:59.043-03:00  INFO 97666 --- [ms-reservas] [           main] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2026-11-18T12:24:59.044-03:00  INFO 97666 --- [ms-reservas] [           main] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-11-18T12:24:59.044-03:00  INFO 97666 --- [ms-reservas] [           main] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2026-11-18T12:24:59.044-03:00  INFO 97666 --- [ms-reservas] [           main] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2026-11-18T12:24:59.054-03:00  INFO 97666 --- [ms-reservas] [           main] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-plomeria-83333d97-882e-4530-b62f-b7356a3baf0a-2 unregistered
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.032 s -- in cl.losandes.mediturno.reservas.plomeria.KafkaRespondeIT
+[INFO] Running cl.losandes.mediturno.reservas.plomeria.PostgresRespondeIT
+2026-11-18T12:24:59.072-03:00  INFO 97666 --- [ms-reservas] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [cl.losandes.mediturno.reservas.plomeria.PostgresRespondeIT]: PostgresRespondeIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-18T12:24:59.078-03:00  INFO 97666 --- [ms-reservas] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration cl.losandes.mediturno.reservas.MsReservasApplication for test class cl.losandes.mediturno.reservas.plomeria.PostgresRespondeIT
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.470 s -- in cl.losandes.mediturno.reservas.plomeria.PostgresRespondeIT
+[INFO] Running cl.losandes.mediturno.reservas.plomeria.RedisRespondeIT
+2026-11-18T12:24:59.546-03:00  INFO 97666 --- [ms-reservas] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [cl.losandes.mediturno.reservas.plomeria.RedisRespondeIT]: RedisRespondeIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-18T12:24:59.552-03:00  INFO 97666 --- [ms-reservas] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration cl.losandes.mediturno.reservas.MsReservasApplication for test class cl.losandes.mediturno.reservas.plomeria.RedisRespondeIT
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.798 s -- in cl.losandes.mediturno.reservas.plomeria.RedisRespondeIT
+2026-11-18T12:25:00.928-03:00  INFO 97666 --- [ms-reservas] [ntainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Revoke previously assigned partitions mediturno.pagos.confirmaciones-0, mediturno.pagos.confirmaciones-1, mediturno.pagos.confirmaciones-2
+2026-11-18T12:25:00.928-03:00  INFO 97666 --- [ms-reservas] [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : ms-reservas: partitions revoked: [mediturno.pagos.confirmaciones-0, mediturno.pagos.confirmaciones-1, mediturno.pagos.confirmaciones-2]
+2026-11-18T12:25:00.929-03:00  INFO 97666 --- [ms-reservas] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Member consumer-ms-reservas-1-5f7826e3-cb7f-401e-9cc3-e1f5b68cc564 sending LeaveGroup request to coordinator localhost:32781 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+2026-11-18T12:25:00.930-03:00  INFO 97666 --- [ms-reservas] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Resetting generation and member id due to: consumer pro-actively leaving the group
+2026-11-18T12:25:00.930-03:00  INFO 97666 --- [ms-reservas] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Request joining group due to: consumer pro-actively leaving the group
+2026-11-18T12:25:00.930-03:00  INFO 97666 --- [ms-reservas] [ntainer#0-0-C-1] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Unsubscribed all topics or patterns and assigned partitions
+2026-11-18T12:25:00.931-03:00  INFO 97666 --- [ms-reservas] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Resetting generation and member id due to: consumer pro-actively leaving the group
+2026-11-18T12:25:00.931-03:00  INFO 97666 --- [ms-reservas] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Request joining group due to: consumer pro-actively leaving the group
+2026-11-18T12:25:01.002-03:00  INFO 97666 --- [ms-reservas] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Node 1 disconnected.
+2026-11-18T12:25:01.004-03:00  INFO 97666 --- [ms-reservas] [rvas-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=ms-reservas-producer-1] Node 1 disconnected.
+2026-11-18T12:25:01.007-03:00  INFO 97666 --- [ms-reservas] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Cancelled in-flight FETCH request with correlation id 21 due to node 1 being disconnected (elapsed time since creation: 117ms, elapsed time since send: 117ms, request timeout: 30000ms)
+2026-11-18T12:25:01.007-03:00  INFO 97666 --- [ms-reservas] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Cancelled in-flight FETCH request with correlation id 23 due to node 1 being disconnected (elapsed time since creation: 68ms, elapsed time since send: 68ms, request timeout: 30000ms)
+2026-11-18T12:25:01.007-03:00  INFO 97666 --- [ms-reservas] [rvas-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=ms-reservas-producer-1] Node -1 disconnected.
+2026-11-18T12:25:01.007-03:00  INFO 97666 --- [ms-reservas] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Node 2147483646 disconnected.
+2026-11-18T12:25:01.008-03:00  INFO 97666 --- [ms-reservas] [ntainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Error sending fetch request (sessionId=1644684830, epoch=FINAL) to node 1:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2026-11-18T12:25:01.019-03:00  INFO 97666 --- [ms-reservas] [ntainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2026-11-18T12:25:01.019-03:00  INFO 97666 --- [ms-reservas] [ntainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-11-18T12:25:01.019-03:00  INFO 97666 --- [ms-reservas] [ntainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2026-11-18T12:25:01.019-03:00  INFO 97666 --- [ms-reservas] [ntainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2026-11-18T12:25:01.026-03:00  INFO 97666 --- [ms-reservas] [ntainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-ms-reservas-1 unregistered
+2026-11-18T12:25:01.061-03:00  INFO 97666 --- [ms-reservas] [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : ms-reservas: Consumer stopped
+2026-11-18T12:25:01.109-03:00  INFO 97666 --- [ms-reservas] [rvas-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=ms-reservas-producer-1] Node 1 disconnected.
+2026-11-18T12:25:01.110-03:00  WARN 97666 --- [ms-reservas] [rvas-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=ms-reservas-producer-1] Connection to node 1 (localhost/127.0.0.1:32781) could not be established. Node may not be available.
+2026-11-18T12:25:01.291-03:00  INFO 97666 --- [ms-reservas] [rvas-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=ms-reservas-producer-1] Node 1 disconnected.
+2026-11-18T12:25:01.292-03:00  WARN 97666 --- [ms-reservas] [rvas-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=ms-reservas-producer-1] Connection to node 1 (localhost/127.0.0.1:32781) could not be established. Node may not be available.
+2026-11-18T12:25:01.500-03:00  INFO 97666 --- [ms-reservas] [rvas-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=ms-reservas-producer-1] Node 1 disconnected.
+2026-11-18T12:25:01.500-03:00  WARN 97666 --- [ms-reservas] [rvas-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=ms-reservas-producer-1] Connection to node 1 (localhost/127.0.0.1:32781) could not be established. Node may not be available.
+2026-11-18T12:25:01.861-03:00  INFO 97666 --- [ms-reservas] [xecutorLoop-1-1] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost/127.0.0.1:32779
+2026-11-18T12:25:01.875-03:00  WARN 97666 --- [ms-reservas] [ioEventLoop-4-2] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [localhost/<unresolved>:32779]: Connection refused: localhost/127.0.0.1:32779
+2026-11-18T12:25:01.934-03:00  INFO 97666 --- [ms-reservas] [ionShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=ms-reservas-producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2026-11-18T12:25:01.940-03:00  INFO 97666 --- [ms-reservas] [ionShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2026-11-18T12:25:01.940-03:00  INFO 97666 --- [ms-reservas] [ionShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-11-18T12:25:01.940-03:00  INFO 97666 --- [ms-reservas] [ionShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2026-11-18T12:25:01.940-03:00  INFO 97666 --- [ms-reservas] [ionShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2026-11-18T12:25:01.941-03:00  INFO 97666 --- [ms-reservas] [ionShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for ms-reservas-producer-1 unregistered
+2026-11-18T12:25:01.985-03:00  INFO 97666 --- [ms-reservas] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-18T12:25:01.995-03:00  WARN 97666 --- [ms-reservas] [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@3b97b2ae (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-11-18T12:25:01.997-03:00  WARN 97666 --- [ms-reservas] [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@57076360 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-11-18T12:25:01.998-03:00  WARN 97666 --- [ms-reservas] [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@6fd9f1d2 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-11-18T12:25:01.999-03:00  WARN 97666 --- [ms-reservas] [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@4052cf6b (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-11-18T12:25:02.001-03:00  WARN 97666 --- [ms-reservas] [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@536674da (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-11-18T12:25:02.002-03:00  WARN 97666 --- [ms-reservas] [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@3f1611b5 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-11-18T12:25:02.003-03:00  WARN 97666 --- [ms-reservas] [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@1fe130e4 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-11-18T12:25:02.004-03:00  WARN 97666 --- [ms-reservas] [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@499e8de4 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-11-18T12:25:02.005-03:00  WARN 97666 --- [ms-reservas] [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@29bee0a9 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-11-18T12:25:02.006-03:00  WARN 97666 --- [ms-reservas] [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@262ad792 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+[ERROR] Surefire is going to kill self fork JVM. The exit has elapsed 30 seconds after System.exit(0).
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jacoco:0.8.12:report (reporte) @ ms-reservas ---
+[INFO] Loading execution data file /home/cadel/Escritorio/mediturno/entrega-3/ms-reservas/target/jacoco.exec
+[INFO] Analyzed bundle 'ms-reservas' with 67 classes
+[INFO] 
+[INFO] --- failsafe:3.2.5:verify (default) @ ms-reservas ---
+[INFO] 
+[INFO] --------------< cl.losandes.mediturno:ms-notificaciones >---------------
+[INFO] Building ms-notificaciones 2.1.0                                   [5/6]
+[INFO]   from ms-notificaciones/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.37.0/checker-qual-3.37.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.37.0/checker-qual-3.37.0.jar (224 kB at 2.3 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.21.1/error_prone_annotations-2.21.1.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/annotations/17.0.0/annotations-17.0.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.21.1/error_prone_annotations-2.21.1.jar (17 kB at 280 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/annotations/17.0.0/annotations-17.0.0.jar (19 kB at 247 kB/s)
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ ms-notificaciones ---
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (preparar-agente) @ ms-notificaciones ---
+[INFO] argLine set to -javaagent:/home/cadel/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=/home/cadel/Escritorio/mediturno/entrega-3/ms-notificaciones/target/jacoco.exec
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ ms-notificaciones ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ ms-notificaciones ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 11 source files with javac [debug parameters release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ ms-notificaciones ---
+[INFO] skip non existing resourceDirectory /home/cadel/Escritorio/mediturno/entrega-3/ms-notificaciones/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ ms-notificaciones ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ ms-notificaciones ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ ms-notificaciones ---
+[INFO] Building jar: /home/cadel/Escritorio/mediturno/entrega-3/ms-notificaciones/target/ms-notificaciones-2.1.0.jar
+[INFO] 
+[INFO] --- spring-boot:3.3.4:repackage (repackage) @ ms-notificaciones ---
+[INFO] Replacing main artifact /home/cadel/Escritorio/mediturno/entrega-3/ms-notificaciones/target/ms-notificaciones-2.1.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /home/cadel/Escritorio/mediturno/entrega-3/ms-notificaciones/target/ms-notificaciones-2.1.0.jar.original
+[INFO] 
+[INFO] --- spring-boot:3.3.4:repackage (default) @ ms-notificaciones ---
+[INFO] Replacing main artifact /home/cadel/Escritorio/mediturno/entrega-3/ms-notificaciones/target/ms-notificaciones-2.1.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /home/cadel/Escritorio/mediturno/entrega-3/ms-notificaciones/target/ms-notificaciones-2.1.0.jar.original
+[INFO] 
+[INFO] --- failsafe:3.2.5:integration-test (default) @ ms-notificaciones ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- jacoco:0.8.12:report (reporte) @ ms-notificaciones ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO] 
+[INFO] --- failsafe:3.2.5:verify (default) @ ms-notificaciones ---
+[INFO] 
+[INFO] -------------------< cl.losandes.mediturno:ms-pagos >-------------------
+[INFO] Building ms-pagos 2.1.0                                            [6/6]
+[INFO]   from ms-pagos/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ ms-pagos ---
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (preparar-agente) @ ms-pagos ---
+[INFO] argLine set to -javaagent:/home/cadel/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=/home/cadel/Escritorio/mediturno/entrega-3/ms-pagos/target/jacoco.exec
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ ms-pagos ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ ms-pagos ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 6 source files with javac [debug parameters release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ ms-pagos ---
+[INFO] skip non existing resourceDirectory /home/cadel/Escritorio/mediturno/entrega-3/ms-pagos/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ ms-pagos ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ ms-pagos ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ ms-pagos ---
+[INFO] Building jar: /home/cadel/Escritorio/mediturno/entrega-3/ms-pagos/target/ms-pagos-2.1.0.jar
+[INFO] 
+[INFO] --- spring-boot:3.3.4:repackage (repackage) @ ms-pagos ---
+[INFO] Replacing main artifact /home/cadel/Escritorio/mediturno/entrega-3/ms-pagos/target/ms-pagos-2.1.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /home/cadel/Escritorio/mediturno/entrega-3/ms-pagos/target/ms-pagos-2.1.0.jar.original
+[INFO] 
+[INFO] --- spring-boot:3.3.4:repackage (default) @ ms-pagos ---
+[INFO] Replacing main artifact /home/cadel/Escritorio/mediturno/entrega-3/ms-pagos/target/ms-pagos-2.1.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /home/cadel/Escritorio/mediturno/entrega-3/ms-pagos/target/ms-pagos-2.1.0.jar.original
+[INFO] 
+[INFO] --- failsafe:3.2.5:integration-test (default) @ ms-pagos ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- jacoco:0.8.12:report (reporte) @ ms-pagos ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO] 
+[INFO] --- failsafe:3.2.5:verify (default) @ ms-pagos ---
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for mediturno-release-2.1 2.1.0:
+[INFO] 
+[INFO] mediturno-release-2.1 .............................. SUCCESS [  1.284 s]
+[INFO] ms-tarificacion .................................... SUCCESS [ 21.776 s]
+[INFO] ms-pacientes ....................................... SUCCESS [01:00 min]
+[INFO] ms-reservas ........................................ SUCCESS [02:19 min]
+[INFO] ms-notificaciones .................................. SUCCESS [  1.019 s]
+[INFO] ms-pagos ........................................... SUCCESS [  0.772 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  03:45 min
+[INFO] Finished at: 2026-11-18T12:25:32-03:00
+[INFO] ------------------------------------------------------------------------

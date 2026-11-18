@@ -1,0 +1,1081 @@
+[INFO] Scanning for projects...
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/testcontainers/testcontainers-bom/1.21.4/testcontainers-bom-1.21.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/testcontainers/testcontainers-bom/1.21.4/testcontainers-bom-1.21.4.pom (12 kB at 23 kB/s)
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] mediturno-release-2.1                                              [pom]
+[INFO] ms-tarificacion                                                    [jar]
+[INFO] ms-pacientes                                                       [jar]
+[INFO] ms-reservas                                                        [jar]
+[INFO] ms-notificaciones                                                  [jar]
+[INFO] ms-pagos                                                           [jar]
+[INFO] 
+[INFO] ------------< cl.losandes.mediturno:mediturno-release-2.1 >-------------
+[INFO] Building mediturno-release-2.1 2.1.0                               [1/6]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ mediturno-release-2.1 ---
+[INFO] Deleting /home/cadel/Escritorio/mediturno/entrega-3/target
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (preparar-agente) @ mediturno-release-2.1 ---
+[INFO] argLine set to -javaagent:/home/cadel/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=/home/cadel/Escritorio/mediturno/entrega-3/target/jacoco.exec
+[INFO] 
+[INFO] --- failsafe:3.2.5:integration-test (default) @ mediturno-release-2.1 ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- jacoco:0.8.12:report (reporte) @ mediturno-release-2.1 ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO] 
+[INFO] --- failsafe:3.2.5:verify (default) @ mediturno-release-2.1 ---
+[INFO] 
+[INFO] ---------------< cl.losandes.mediturno:ms-tarificacion >----------------
+[INFO] Building ms-tarificacion 2.1.0                                     [2/6]
+[INFO]   from ms-tarificacion/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ ms-tarificacion ---
+[INFO] Deleting /home/cadel/Escritorio/mediturno/entrega-3/ms-tarificacion/target
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (preparar-agente) @ ms-tarificacion ---
+[INFO] argLine set to -javaagent:/home/cadel/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=/home/cadel/Escritorio/mediturno/entrega-3/ms-tarificacion/target/jacoco.exec
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ ms-tarificacion ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ ms-tarificacion ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 14 source files with javac [debug parameters release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ ms-tarificacion ---
+[INFO] skip non existing resourceDirectory /home/cadel/Escritorio/mediturno/entrega-3/ms-tarificacion/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ ms-tarificacion ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 17] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ ms-tarificacion ---
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ ms-tarificacion ---
+[INFO] Building jar: /home/cadel/Escritorio/mediturno/entrega-3/ms-tarificacion/target/ms-tarificacion-2.1.0.jar
+[INFO] 
+[INFO] --- spring-boot:3.3.4:repackage (repackage) @ ms-tarificacion ---
+[INFO] Replacing main artifact /home/cadel/Escritorio/mediturno/entrega-3/ms-tarificacion/target/ms-tarificacion-2.1.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /home/cadel/Escritorio/mediturno/entrega-3/ms-tarificacion/target/ms-tarificacion-2.1.0.jar.original
+[INFO] 
+[INFO] --- spring-boot:3.3.4:repackage (default) @ ms-tarificacion ---
+[INFO] Replacing main artifact /home/cadel/Escritorio/mediturno/entrega-3/ms-tarificacion/target/ms-tarificacion-2.1.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /home/cadel/Escritorio/mediturno/entrega-3/ms-tarificacion/target/ms-tarificacion-2.1.0.jar.original
+[INFO] 
+[INFO] --- failsafe:3.2.5:integration-test (default) @ ms-tarificacion ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running cl.losandes.mediturno.tarificacion.plomeria.TarificacionRespondeIT
+Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2026-11-18T16:03:09.748-03:00  INFO 277466 --- [ms-tarificacion] [           main] c.l.m.t.plomeria.TarificacionRespondeIT  : Starting TarificacionRespondeIT using Java 21.0.11 with PID 277466 (started by cadel in /home/cadel/Escritorio/mediturno/entrega-3/ms-tarificacion)
+2026-11-18T16:03:09.756-03:00  INFO 277466 --- [ms-tarificacion] [           main] c.l.m.t.plomeria.TarificacionRespondeIT  : The following 1 profile is active: "local"
+2026-11-18T16:03:13.741-03:00  INFO 277466 --- [ms-tarificacion] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2026-11-18T16:03:13.771-03:00  INFO 277466 --- [ms-tarificacion] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-18T16:03:13.772-03:00  INFO 277466 --- [ms-tarificacion] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2026-11-18T16:03:13.891-03:00  INFO 277466 --- [ms-tarificacion] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-18T16:03:13.893-03:00  INFO 277466 --- [ms-tarificacion] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3547 ms
+Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+2026-11-18T16:03:15.429-03:00  INFO 277466 --- [ms-tarificacion] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-11-18T16:03:15.790-03:00  INFO 277466 --- [ms-tarificacion] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 43235 (http) with context path '/'
+2026-11-18T16:03:15.816-03:00  INFO 277466 --- [ms-tarificacion] [           main] c.l.m.t.plomeria.TarificacionRespondeIT  : Started TarificacionRespondeIT in 6.894 seconds (process running for 9.33)
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (/home/cadel/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.19/byte-buddy-agent-1.14.19.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+2026-11-18T16:03:17.715-03:00  INFO 277466 --- [ms-tarificacion] [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-18T16:03:17.715-03:00  INFO 277466 --- [ms-tarificacion] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-18T16:03:17.717-03:00  INFO 277466 --- [ms-tarificacion] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.32 s -- in cl.losandes.mediturno.tarificacion.plomeria.TarificacionRespondeIT
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jacoco:0.8.12:report (reporte) @ ms-tarificacion ---
+[INFO] Loading execution data file /home/cadel/Escritorio/mediturno/entrega-3/ms-tarificacion/target/jacoco.exec
+[INFO] Analyzed bundle 'ms-tarificacion' with 12 classes
+[INFO] 
+[INFO] --- failsafe:3.2.5:verify (default) @ ms-tarificacion ---
+[INFO] 
+[INFO] -----------------< cl.losandes.mediturno:ms-pacientes >-----------------
+[INFO] Building ms-pacientes 2.1.0                                        [3/6]
+[INFO]   from ms-pacientes/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/testcontainers/testcontainers/1.21.4/testcontainers-1.21.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/testcontainers/testcontainers/1.21.4/testcontainers-1.21.4.pom (2.6 kB at 34 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/testcontainers/junit-jupiter/1.21.4/junit-jupiter-1.21.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/testcontainers/junit-jupiter/1.21.4/junit-jupiter-1.21.4.pom (1.5 kB at 34 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/testcontainers/postgresql/1.21.4/postgresql-1.21.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/testcontainers/postgresql/1.21.4/postgresql-1.21.4.pom (1.5 kB at 38 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/testcontainers/jdbc/1.21.4/jdbc-1.21.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/testcontainers/jdbc/1.21.4/jdbc-1.21.4.pom (1.5 kB at 25 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/testcontainers/database-commons/1.21.4/database-commons-1.21.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/testcontainers/database-commons/1.21.4/database-commons-1.21.4.pom (1.5 kB at 31 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/testcontainers/testcontainers/1.21.4/testcontainers-1.21.4.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/testcontainers/testcontainers/1.21.4/testcontainers-1.21.4.jar (18 MB at 25 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/testcontainers/junit-jupiter/1.21.4/junit-jupiter-1.21.4.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/testcontainers/postgresql/1.21.4/postgresql-1.21.4.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/testcontainers/jdbc/1.21.4/jdbc-1.21.4.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/testcontainers/database-commons/1.21.4/database-commons-1.21.4.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/testcontainers/junit-jupiter/1.21.4/junit-jupiter-1.21.4.jar (15 kB at 282 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/testcontainers/postgresql/1.21.4/postgresql-1.21.4.jar (11 kB at 89 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/testcontainers/jdbc/1.21.4/jdbc-1.21.4.jar (30 kB at 229 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/testcontainers/database-commons/1.21.4/database-commons-1.21.4.jar (15 kB at 113 kB/s)
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ ms-pacientes ---
+[INFO] Deleting /home/cadel/Escritorio/mediturno/entrega-3/ms-pacientes/target
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (preparar-agente) @ ms-pacientes ---
+[INFO] argLine set to -javaagent:/home/cadel/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=/home/cadel/Escritorio/mediturno/entrega-3/ms-pacientes/target/jacoco.exec
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ ms-pacientes ---
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ ms-pacientes ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 15 source files with javac [debug parameters release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ ms-pacientes ---
+[INFO] skip non existing resourceDirectory /home/cadel/Escritorio/mediturno/entrega-3/ms-pacientes/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ ms-pacientes ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 17] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ ms-pacientes ---
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ ms-pacientes ---
+[INFO] Building jar: /home/cadel/Escritorio/mediturno/entrega-3/ms-pacientes/target/ms-pacientes-2.1.0.jar
+[INFO] 
+[INFO] --- spring-boot:3.3.4:repackage (repackage) @ ms-pacientes ---
+[INFO] Replacing main artifact /home/cadel/Escritorio/mediturno/entrega-3/ms-pacientes/target/ms-pacientes-2.1.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /home/cadel/Escritorio/mediturno/entrega-3/ms-pacientes/target/ms-pacientes-2.1.0.jar.original
+[INFO] 
+[INFO] --- spring-boot:3.3.4:repackage (default) @ ms-pacientes ---
+[INFO] Replacing main artifact /home/cadel/Escritorio/mediturno/entrega-3/ms-pacientes/target/ms-pacientes-2.1.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /home/cadel/Escritorio/mediturno/entrega-3/ms-pacientes/target/ms-pacientes-2.1.0.jar.original
+[INFO] 
+[INFO] --- failsafe:3.2.5:integration-test (default) @ ms-pacientes ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running cl.losandes.mediturno.pacientes.plomeria.PadronRespondeIT
+Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+16:03:24.527 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [cl.losandes.mediturno.pacientes.plomeria.PadronRespondeIT]: PadronRespondeIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16:03:24.667 [main] INFO org.testcontainers.images.PullPolicy -- Image pull policy will be performed by: DefaultPullPolicy()
+16:03:24.676 [main] INFO org.testcontainers.utility.ImageNameSubstitutor -- Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+16:03:24.752 [main] INFO org.testcontainers.DockerClientFactory -- Testcontainers version: 1.21.4
+16:03:26.097 [main] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Found Docker environment with Environment variables, system properties and defaults. Resolved dockerHost=unix:///var/run/docker.sock
+16:03:26.100 [main] INFO org.testcontainers.DockerClientFactory -- Docker host IP address is localhost
+16:03:26.132 [main] INFO org.testcontainers.DockerClientFactory -- Connected to docker: 
+  Server Version: 29.5.3
+  API Version: 1.54
+  Operating System: Fedora Linux 42 (Workstation Edition)
+  Total Memory: 15669 MB
+16:03:26.357 [main] INFO tc.testcontainers/ryuk:0.12.0 -- Pulling docker image: testcontainers/ryuk:0.12.0. Please be patient; this may take some time but only needs to be done once.
+16:03:27.955 [docker-java-stream--1931961954] INFO tc.testcontainers/ryuk:0.12.0 -- Starting to pull image
+16:03:27.999 [docker-java-stream--1931961954] INFO tc.testcontainers/ryuk:0.12.0 -- Pulling image layers:  0 pending,  0 downloaded,  0 extracted, (0 bytes/0 bytes)
+16:03:28.716 [docker-java-stream--1931961954] INFO tc.testcontainers/ryuk:0.12.0 -- Pulling image layers:  2 pending,  1 downloaded,  0 extracted, (827 KB/? MB)
+16:03:28.953 [docker-java-stream--1931961954] INFO tc.testcontainers/ryuk:0.12.0 -- Pulling image layers:  1 pending,  2 downloaded,  0 extracted, (5 MB/? MB)
+16:03:28.999 [docker-java-stream--1931961954] INFO tc.testcontainers/ryuk:0.12.0 -- Pulling image layers:  0 pending,  3 downloaded,  0 extracted, (5 MB/11 MB)
+16:03:29.141 [docker-java-stream--1931961954] INFO tc.testcontainers/ryuk:0.12.0 -- Pulling image layers:  0 pending,  3 downloaded,  1 extracted, (7 MB/11 MB)
+16:03:29.226 [docker-java-stream--1931961954] INFO tc.testcontainers/ryuk:0.12.0 -- Pulling image layers:  0 pending,  3 downloaded,  2 extracted, (7 MB/11 MB)
+16:03:29.278 [docker-java-stream--1931961954] INFO tc.testcontainers/ryuk:0.12.0 -- Pulling image layers:  0 pending,  3 downloaded,  3 extracted, (11 MB/11 MB)
+16:03:29.315 [docker-java-stream--1931961954] INFO tc.testcontainers/ryuk:0.12.0 -- Pull complete. 3 layers, pulled in 1s (downloaded 11 MB at 11 MB/s)
+16:03:29.315 [main] INFO tc.testcontainers/ryuk:0.12.0 -- Image testcontainers/ryuk:0.12.0 pull took PT2.957365498S
+16:03:29.357 [main] INFO tc.testcontainers/ryuk:0.12.0 -- Creating container for image: testcontainers/ryuk:0.12.0
+16:03:29.753 [main] INFO tc.testcontainers/ryuk:0.12.0 -- Container testcontainers/ryuk:0.12.0 is starting: 191a85d3a1a654ea0ccd73f39dd2dffa7d965d6f30141152b3c763ec5a39359e
+16:03:30.192 [main] INFO tc.testcontainers/ryuk:0.12.0 -- Container testcontainers/ryuk:0.12.0 started in PT0.835100027S
+16:03:30.200 [main] INFO org.testcontainers.utility.RyukResourceReaper -- Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+16:03:30.201 [main] INFO org.testcontainers.DockerClientFactory -- Checking the system...
+16:03:30.202 [main] INFO org.testcontainers.DockerClientFactory -- ✔︎ Docker server version should be at least 1.6.0
+16:03:30.470 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration cl.losandes.mediturno.pacientes.MsPacientesApplication for test class cl.losandes.mediturno.pacientes.plomeria.PadronRespondeIT
+16:03:30.743 [main] INFO tc.postgres:16-alpine -- Creating container for image: postgres:16-alpine
+16:03:30.825 [main] INFO tc.postgres:16-alpine -- Container postgres:16-alpine is starting: c2d17c11efbcdb29b1cc3cd8058865a8108d575375231147ef0baab1228d6f8d
+16:03:34.472 [main] INFO tc.postgres:16-alpine -- Container postgres:16-alpine started in PT3.72873982S
+16:03:34.473 [main] INFO tc.postgres:16-alpine -- Container is started (JDBC URL: jdbc:postgresql://localhost:32783/mediturno_pacientes?loggerLevel=OFF)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2026-11-18T16:03:35.280-03:00  INFO 277628 --- [ms-pacientes] [           main] c.l.m.p.plomeria.PadronRespondeIT        : Starting PadronRespondeIT using Java 21.0.11 with PID 277628 (started by cadel in /home/cadel/Escritorio/mediturno/entrega-3/ms-pacientes)
+2026-11-18T16:03:35.283-03:00  INFO 277628 --- [ms-pacientes] [           main] c.l.m.p.plomeria.PadronRespondeIT        : The following 1 profile is active: "local"
+2026-11-18T16:03:38.875-03:00  INFO 277628 --- [ms-pacientes] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-18T16:03:39.125-03:00  INFO 277628 --- [ms-pacientes] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 235 ms. Found 1 JPA repository interface.
+2026-11-18T16:03:40.437-03:00  INFO 277628 --- [ms-pacientes] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2026-11-18T16:03:40.468-03:00  INFO 277628 --- [ms-pacientes] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-18T16:03:40.469-03:00  INFO 277628 --- [ms-pacientes] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2026-11-18T16:03:40.570-03:00  INFO 277628 --- [ms-pacientes] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-18T16:03:40.572-03:00  INFO 277628 --- [ms-pacientes] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4773 ms
+Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+2026-11-18T16:03:41.174-03:00  INFO 277628 --- [ms-pacientes] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-18T16:03:41.286-03:00  INFO 277628 --- [ms-pacientes] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-11-18T16:03:41.359-03:00  INFO 277628 --- [ms-pacientes] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-18T16:03:41.920-03:00  INFO 277628 --- [ms-pacientes] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-18T16:03:41.988-03:00  INFO 277628 --- [ms-pacientes] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-18T16:03:42.384-03:00  INFO 277628 --- [ms-pacientes] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@35007ef
+2026-11-18T16:03:42.388-03:00  INFO 277628 --- [ms-pacientes] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-18T16:03:44.135-03:00  INFO 277628 --- [ms-pacientes] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-18T16:03:44.167-03:00  WARN 277628 --- [ms-pacientes] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2026-11-18T16:03:44.168-03:00  WARN 277628 --- [ms-pacientes] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "paciente" does not exist, skipping
+2026-11-18T16:03:44.189-03:00  INFO 277628 --- [ms-pacientes] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-18T16:03:46.375-03:00  INFO 277628 --- [ms-pacientes] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-11-18T16:03:46.782-03:00  INFO 277628 --- [ms-pacientes] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 41051 (http) with context path '/'
+2026-11-18T16:03:46.806-03:00  INFO 277628 --- [ms-pacientes] [           main] c.l.m.p.plomeria.PadronRespondeIT        : Started PadronRespondeIT in 12.249 seconds (process running for 24.177)
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (/home/cadel/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.19/byte-buddy-agent-1.14.19.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+2026-11-18T16:03:48.895-03:00  INFO 277628 --- [ms-pacientes] [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-18T16:03:48.895-03:00  INFO 277628 --- [ms-pacientes] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-18T16:03:48.897-03:00  INFO 277628 --- [ms-pacientes] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 25.96 s -- in cl.losandes.mediturno.pacientes.plomeria.PadronRespondeIT
+2026-11-18T16:03:51.122-03:00  INFO 277628 --- [ms-pacientes] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-18T16:03:51.128-03:00  WARN 277628 --- [ms-pacientes] [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@35007ef (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-11-18T16:03:51.129-03:00  WARN 277628 --- [ms-pacientes] [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@3a867714 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-11-18T16:03:51.130-03:00  WARN 277628 --- [ms-pacientes] [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@5a6a96ed (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-11-18T16:03:51.131-03:00  WARN 277628 --- [ms-pacientes] [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@71106c17 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-11-18T16:03:51.131-03:00  WARN 277628 --- [ms-pacientes] [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@2d0cd829 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-11-18T16:03:51.132-03:00  WARN 277628 --- [ms-pacientes] [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@243b344b (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-11-18T16:03:51.132-03:00  WARN 277628 --- [ms-pacientes] [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@2ae813df (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-11-18T16:03:51.133-03:00  WARN 277628 --- [ms-pacientes] [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@58eab241 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-11-18T16:03:51.134-03:00  WARN 277628 --- [ms-pacientes] [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@136ce4e5 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-11-18T16:03:51.134-03:00  WARN 277628 --- [ms-pacientes] [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@6e0813af (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+[ERROR] Surefire is going to kill self fork JVM. The exit has elapsed 30 seconds after System.exit(0).
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jacoco:0.8.12:report (reporte) @ ms-pacientes ---
+[INFO] Loading execution data file /home/cadel/Escritorio/mediturno/entrega-3/ms-pacientes/target/jacoco.exec
+[INFO] Analyzed bundle 'ms-pacientes' with 14 classes
+[INFO] 
+[INFO] --- failsafe:3.2.5:verify (default) @ ms-pacientes ---
+[INFO] 
+[INFO] -----------------< cl.losandes.mediturno:ms-reservas >------------------
+[INFO] Building ms-reservas 2.1.0                                         [4/6]
+[INFO]   from ms-reservas/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/testcontainers/kafka/1.21.4/kafka-1.21.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/testcontainers/kafka/1.21.4/kafka-1.21.4.pom (1.5 kB at 23 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/testcontainers/toxiproxy/1.21.4/toxiproxy-1.21.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/testcontainers/toxiproxy/1.21.4/toxiproxy-1.21.4.pom (1.7 kB at 32 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/testcontainers/kafka/1.21.4/kafka-1.21.4.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/testcontainers/kafka/1.21.4/kafka-1.21.4.jar (16 kB at 175 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/testcontainers/toxiproxy/1.21.4/toxiproxy-1.21.4.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/testcontainers/toxiproxy/1.21.4/toxiproxy-1.21.4.jar (4.7 kB at 71 kB/s)
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ ms-reservas ---
+[INFO] Deleting /home/cadel/Escritorio/mediturno/entrega-3/ms-reservas/target
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (preparar-agente) @ ms-reservas ---
+[INFO] argLine set to -javaagent:/home/cadel/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=/home/cadel/Escritorio/mediturno/entrega-3/ms-reservas/target/jacoco.exec
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ ms-reservas ---
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] Copying 8 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ ms-reservas ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 72 source files with javac [debug parameters release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ ms-reservas ---
+[INFO] skip non existing resourceDirectory /home/cadel/Escritorio/mediturno/entrega-3/ms-reservas/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ ms-reservas ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 5 source files with javac [debug parameters release 17] to target/test-classes
+[INFO] /home/cadel/Escritorio/mediturno/entrega-3/ms-reservas/src/test/java/cl/losandes/mediturno/reservas/plomeria/BaseDePlomeria.java: /home/cadel/Escritorio/mediturno/entrega-3/ms-reservas/src/test/java/cl/losandes/mediturno/reservas/plomeria/BaseDePlomeria.java uses or overrides a deprecated API.
+[INFO] /home/cadel/Escritorio/mediturno/entrega-3/ms-reservas/src/test/java/cl/losandes/mediturno/reservas/plomeria/BaseDePlomeria.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ ms-reservas ---
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ ms-reservas ---
+[INFO] Building jar: /home/cadel/Escritorio/mediturno/entrega-3/ms-reservas/target/ms-reservas-2.1.0.jar
+[INFO] 
+[INFO] --- spring-boot:3.3.4:repackage (repackage) @ ms-reservas ---
+[INFO] Replacing main artifact /home/cadel/Escritorio/mediturno/entrega-3/ms-reservas/target/ms-reservas-2.1.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /home/cadel/Escritorio/mediturno/entrega-3/ms-reservas/target/ms-reservas-2.1.0.jar.original
+[INFO] 
+[INFO] --- spring-boot:3.3.4:repackage (default) @ ms-reservas ---
+[INFO] Replacing main artifact /home/cadel/Escritorio/mediturno/entrega-3/ms-reservas/target/ms-reservas-2.1.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /home/cadel/Escritorio/mediturno/entrega-3/ms-reservas/target/ms-reservas-2.1.0.jar.original
+[INFO] 
+[INFO] --- failsafe:3.2.5:integration-test (default) @ ms-reservas ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+Nov 18, 2026 4:04:25 PM org.junit.platform.launcher.core.LauncherConfigurationParameters loadClasspathResource
+WARNING: Discovered 2 'junit-platform.properties' configuration files in the classpath; only the first will be used.
+Nov 18, 2026 4:04:25 PM org.junit.platform.launcher.core.LauncherConfigurationParameters loadClasspathResource
+WARNING: Discovered 2 'junit-platform.properties' configuration files in the classpath; only the first will be used.
+Nov 18, 2026 4:04:26 PM org.junit.platform.launcher.core.LauncherConfigurationParameters loadClasspathResource
+WARNING: Discovered 2 'junit-platform.properties' configuration files in the classpath; only the first will be used.
+Nov 18, 2026 4:04:26 PM org.junit.platform.launcher.core.LauncherConfigurationParameters loadClasspathResource
+WARNING: Discovered 2 'junit-platform.properties' configuration files in the classpath; only the first will be used.
+Nov 18, 2026 4:04:26 PM org.junit.platform.launcher.core.LauncherConfigurationParameters loadClasspathResource
+WARNING: Discovered 2 'junit-platform.properties' configuration files in the classpath; only the first will be used.
+Nov 18, 2026 4:04:26 PM org.junit.platform.launcher.core.LauncherConfigurationParameters loadClasspathResource
+WARNING: Discovered 2 'junit-platform.properties' configuration files in the classpath; only the first will be used.
+Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+[INFO] Running cl.losandes.mediturno.reservas.plomeria.ContextoLevantaIT
+16:04:27.057 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [cl.losandes.mediturno.reservas.plomeria.ContextoLevantaIT]: ContextoLevantaIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16:04:27.189 [main] INFO org.testcontainers.images.PullPolicy -- Image pull policy will be performed by: DefaultPullPolicy()
+16:04:27.197 [main] INFO org.testcontainers.utility.ImageNameSubstitutor -- Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+16:04:27.227 [testcontainers-lifecycle-0] INFO org.testcontainers.DockerClientFactory -- Testcontainers version: 1.21.4
+16:04:28.438 [testcontainers-lifecycle-0] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Found Docker environment with Environment variables, system properties and defaults. Resolved dockerHost=unix:///var/run/docker.sock
+16:04:28.441 [testcontainers-lifecycle-0] INFO org.testcontainers.DockerClientFactory -- Docker host IP address is localhost
+16:04:28.473 [testcontainers-lifecycle-0] INFO org.testcontainers.DockerClientFactory -- Connected to docker: 
+  Server Version: 29.5.3
+  API Version: 1.54
+  Operating System: Fedora Linux 42 (Workstation Edition)
+  Total Memory: 15669 MB
+16:04:28.572 [testcontainers-lifecycle-0] INFO tc.testcontainers/ryuk:0.12.0 -- Creating container for image: testcontainers/ryuk:0.12.0
+16:04:28.953 [testcontainers-lifecycle-0] INFO tc.testcontainers/ryuk:0.12.0 -- Container testcontainers/ryuk:0.12.0 is starting: 2d25d67d41add8b4a779c84ce6bd799fb48b382a3e93bffd00d0f5452dd05f3b
+16:04:29.391 [testcontainers-lifecycle-0] INFO tc.testcontainers/ryuk:0.12.0 -- Container testcontainers/ryuk:0.12.0 started in PT0.818987822S
+16:04:29.402 [testcontainers-lifecycle-0] INFO org.testcontainers.utility.RyukResourceReaper -- Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+16:04:29.402 [testcontainers-lifecycle-0] INFO org.testcontainers.DockerClientFactory -- Checking the system...
+16:04:29.403 [testcontainers-lifecycle-0] INFO org.testcontainers.DockerClientFactory -- ✔︎ Docker server version should be at least 1.6.0
+16:04:29.404 [testcontainers-lifecycle-0] INFO tc.postgres:16-alpine -- Creating container for image: postgres:16-alpine
+16:04:29.405 [testcontainers-lifecycle-1] INFO tc.redis:7-alpine -- Creating container for image: redis:7-alpine
+16:04:29.405 [testcontainers-lifecycle-2] INFO tc.confluentinc/cp-kafka:7.7.0 -- Creating container for image: confluentinc/cp-kafka:7.7.0
+16:04:29.490 [testcontainers-lifecycle-0] INFO tc.postgres:16-alpine -- Container postgres:16-alpine is starting: 2c0d479b04051365a6d919117fdb7c544fa7ae5ae980f16d0ba7ff8129822fa3
+16:04:29.490 [testcontainers-lifecycle-1] INFO tc.redis:7-alpine -- Container redis:7-alpine is starting: 0f5b95957b4a12815d7bbb3ec4dc84018365da5ffd9ad1f45e7beb220c54ca46
+16:04:29.499 [testcontainers-lifecycle-2] INFO tc.confluentinc/cp-kafka:7.7.0 -- Container confluentinc/cp-kafka:7.7.0 is starting: 6f05e8e14f1a156b69a6026f8f7332b75199435d36060bc52057dd6936d6b79a
+16:04:29.960 [testcontainers-lifecycle-1] INFO tc.redis:7-alpine -- Container redis:7-alpine started in PT0.554932457S
+16:04:33.242 [testcontainers-lifecycle-0] INFO tc.postgres:16-alpine -- Container postgres:16-alpine started in PT3.837125436S
+16:04:33.243 [testcontainers-lifecycle-0] INFO tc.postgres:16-alpine -- Container is started (JDBC URL: jdbc:postgresql://localhost:32788/mediturno_reservas?loggerLevel=OFF)
+16:04:38.043 [testcontainers-lifecycle-2] INFO tc.confluentinc/cp-kafka:7.7.0 -- Container confluentinc/cp-kafka:7.7.0 started in PT8.638273023S
+16:04:38.397 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration cl.losandes.mediturno.reservas.MsReservasApplication for test class cl.losandes.mediturno.reservas.plomeria.ContextoLevantaIT
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2026-11-18T16:04:39.693-03:00  WARN 278170 --- [ms-reservas] [           main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/cadel/.m2/repository/org/json/json/20240205/json-20240205.jar!/org/json/JSONObject.class
+	jar:file:/home/cadel/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2026-11-18T16:04:39.736-03:00  INFO 278170 --- [ms-reservas] [           main] c.l.m.r.plomeria.ContextoLevantaIT       : Starting ContextoLevantaIT using Java 21.0.11 with PID 278170 (started by cadel in /home/cadel/Escritorio/mediturno/entrega-3/ms-reservas)
+2026-11-18T16:04:39.738-03:00  INFO 278170 --- [ms-reservas] [           main] c.l.m.r.plomeria.ContextoLevantaIT       : The following 1 profile is active: "plomeria"
+2026-11-18T16:04:44.099-03:00  INFO 278170 --- [ms-reservas] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-11-18T16:04:44.105-03:00  INFO 278170 --- [ms-reservas] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-18T16:04:44.419-03:00  INFO 278170 --- [ms-reservas] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 295 ms. Found 2 JPA repository interfaces.
+2026-11-18T16:04:44.452-03:00  INFO 278170 --- [ms-reservas] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-11-18T16:04:44.455-03:00  INFO 278170 --- [ms-reservas] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-11-18T16:04:44.490-03:00  INFO 278170 --- [ms-reservas] [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cl.losandes.mediturno.reservas.infraestructura.PacienteJpaRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-11-18T16:04:44.491-03:00  INFO 278170 --- [ms-reservas] [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cl.losandes.mediturno.reservas.infraestructura.ReservaJpaRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-11-18T16:04:44.492-03:00  INFO 278170 --- [ms-reservas] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2026-11-18T16:04:47.140-03:00  INFO 278170 --- [ms-reservas] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2026-11-18T16:04:47.178-03:00  INFO 278170 --- [ms-reservas] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-18T16:04:47.179-03:00  INFO 278170 --- [ms-reservas] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2026-11-18T16:04:47.348-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-18T16:04:47.351-03:00  INFO 278170 --- [ms-reservas] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7110 ms
+Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+2026-11-18T16:04:48.651-03:00  INFO 278170 --- [ms-reservas] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-18T16:04:48.801-03:00  INFO 278170 --- [ms-reservas] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-11-18T16:04:48.893-03:00  INFO 278170 --- [ms-reservas] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-18T16:04:49.669-03:00  INFO 278170 --- [ms-reservas] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-18T16:04:49.758-03:00  INFO 278170 --- [ms-reservas] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-18T16:04:50.244-03:00  INFO 278170 --- [ms-reservas] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@77635a
+2026-11-18T16:04:50.248-03:00  INFO 278170 --- [ms-reservas] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-18T16:04:53.639-03:00  INFO 278170 --- [ms-reservas] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-18T16:04:53.696-03:00  WARN 278170 --- [ms-reservas] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2026-11-18T16:04:53.697-03:00  WARN 278170 --- [ms-reservas] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "paciente" does not exist, skipping
+2026-11-18T16:04:53.699-03:00  WARN 278170 --- [ms-reservas] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2026-11-18T16:04:53.699-03:00  WARN 278170 --- [ms-reservas] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "reserva" does not exist, skipping
+2026-11-18T16:04:53.741-03:00  INFO 278170 --- [ms-reservas] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-18T16:04:54.733-03:00  INFO 278170 --- [ms-reservas] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-18T16:05:00.728-03:00  INFO 278170 --- [ms-reservas] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 4 endpoints beneath base path '/actuator'
+2026-11-18T16:05:01.240-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.controllers = []
+	bootstrap.servers = [PLAINTEXT://localhost:32787]
+	client.dns.lookup = use_all_dns_ips
+	client.id = ms-reservas-admin-0
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	enable.metrics.push = true
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2026-11-18T16:05:01.482-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
+2026-11-18T16:05:01.482-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
+2026-11-18T16:05:01.483-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1795028701480
+2026-11-18T16:05:03.151-03:00  INFO 278170 --- [ms-reservas] [eservas-admin-0] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for ms-reservas-admin-0 unregistered
+2026-11-18T16:05:03.159-03:00  INFO 278170 --- [ms-reservas] [eservas-admin-0] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2026-11-18T16:05:03.159-03:00  INFO 278170 --- [ms-reservas] [eservas-admin-0] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-11-18T16:05:03.159-03:00  INFO 278170 --- [ms-reservas] [eservas-admin-0] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2026-11-18T16:05:03.219-03:00  INFO 278170 --- [ms-reservas] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 34793 (http) with context path '/'
+2026-11-18T16:05:03.320-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [PLAINTEXT://localhost:32787]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-ms-reservas-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = ms-reservas
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2026-11-18T16:05:03.433-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-11-18T16:05:03.537-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
+2026-11-18T16:05:03.538-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
+2026-11-18T16:05:03.538-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1795028703537
+2026-11-18T16:05:03.564-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Subscribed to topic(s): mediturno.pagos.confirmaciones
+2026-11-18T16:05:03.616-03:00  INFO 278170 --- [ms-reservas] [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Cluster ID: extEQ_YCSR2pI8pkBzOueA
+2026-11-18T16:05:03.619-03:00  INFO 278170 --- [ms-reservas] [           main] c.l.m.r.plomeria.ContextoLevantaIT       : Started ContextoLevantaIT in 24.848 seconds (process running for 39.406)
+2026-11-18T16:05:03.769-03:00  INFO 278170 --- [ms-reservas] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Discovered group coordinator localhost:32787 (id: 2147483646 rack: null)
+2026-11-18T16:05:03.777-03:00  INFO 278170 --- [ms-reservas] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] (Re-)joining group
+2026-11-18T16:05:03.829-03:00  INFO 278170 --- [ms-reservas] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Request joining group due to: need to re-join with the given member-id: consumer-ms-reservas-1-503a5179-5f57-49c0-a0b0-5c0c26fd10b6
+2026-11-18T16:05:03.831-03:00  INFO 278170 --- [ms-reservas] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] (Re-)joining group
+2026-11-18T16:05:03.865-03:00  INFO 278170 --- [ms-reservas] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Successfully joined group with generation Generation{generationId=1, memberId='consumer-ms-reservas-1-503a5179-5f57-49c0-a0b0-5c0c26fd10b6', protocol='range'}
+2026-11-18T16:05:03.876-03:00  INFO 278170 --- [ms-reservas] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Finished assignment for group at generation 1: {consumer-ms-reservas-1-503a5179-5f57-49c0-a0b0-5c0c26fd10b6=Assignment(partitions=[mediturno.pagos.confirmaciones-0, mediturno.pagos.confirmaciones-1, mediturno.pagos.confirmaciones-2])}
+2026-11-18T16:05:03.951-03:00  INFO 278170 --- [ms-reservas] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Successfully synced group in generation Generation{generationId=1, memberId='consumer-ms-reservas-1-503a5179-5f57-49c0-a0b0-5c0c26fd10b6', protocol='range'}
+2026-11-18T16:05:03.953-03:00  INFO 278170 --- [ms-reservas] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Notifying assignor about the new Assignment(partitions=[mediturno.pagos.confirmaciones-0, mediturno.pagos.confirmaciones-1, mediturno.pagos.confirmaciones-2])
+2026-11-18T16:05:03.958-03:00  INFO 278170 --- [ms-reservas] [ntainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Adding newly assigned partitions: mediturno.pagos.confirmaciones-0, mediturno.pagos.confirmaciones-1, mediturno.pagos.confirmaciones-2
+2026-11-18T16:05:03.981-03:00  INFO 278170 --- [ms-reservas] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Found no committed offset for partition mediturno.pagos.confirmaciones-0
+2026-11-18T16:05:03.982-03:00  INFO 278170 --- [ms-reservas] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Found no committed offset for partition mediturno.pagos.confirmaciones-1
+2026-11-18T16:05:03.982-03:00  INFO 278170 --- [ms-reservas] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Found no committed offset for partition mediturno.pagos.confirmaciones-2
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2026-11-18T16:05:04.005-03:00  INFO 278170 --- [ms-reservas] [ntainer#0-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Resetting offset for partition mediturno.pagos.confirmaciones-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:32787 (id: 1 rack: null)], epoch=0}}.
+2026-11-18T16:05:04.006-03:00  INFO 278170 --- [ms-reservas] [ntainer#0-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Resetting offset for partition mediturno.pagos.confirmaciones-1 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:32787 (id: 1 rack: null)], epoch=0}}.
+2026-11-18T16:05:04.006-03:00  INFO 278170 --- [ms-reservas] [ntainer#0-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-ms-reservas-1, groupId=ms-reservas] Resetting offset for partition mediturno.pagos.confirmaciones-2 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:32787 (id: 1 rack: null)], epoch=0}}.
+2026-11-18T16:05:04.007-03:00  INFO 278170 --- [ms-reservas] [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : ms-reservas: partitions assigned: [mediturno.pagos.confirmaciones-0, mediturno.pagos.confirmaciones-1, mediturno.pagos.confirmaciones-2]
+WARNING: A Java agent has been loaded dynamically (/home/cadel/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.19/byte-buddy-agent-1.14.19.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 37.95 s -- in cl.losandes.mediturno.reservas.plomeria.ContextoLevantaIT
+[INFO] Running cl.losandes.mediturno.reservas.plomeria.KafkaRespondeIT
+2026-11-18T16:05:04.752-03:00  INFO 278170 --- [ms-reservas] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [cl.losandes.mediturno.reservas.plomeria.KafkaRespondeIT]: KafkaRespondeIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-18T16:05:04.758-03:00  INFO 278170 --- [ms-reservas] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration cl.losandes.mediturno.reservas.MsReservasApplication for test class cl.losandes.mediturno.reservas.plomeria.KafkaRespondeIT
+2026-11-18T16:05:04.771-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.controllers = []
+	bootstrap.servers = [PLAINTEXT://localhost:32787]
+	client.dns.lookup = use_all_dns_ips
+	client.id = ms-reservas-admin-1
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	enable.metrics.push = true
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2026-11-18T16:05:04.775-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
+2026-11-18T16:05:04.775-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
+2026-11-18T16:05:04.775-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1795028704774
+2026-11-18T16:05:04.794-03:00  INFO 278170 --- [ms-reservas] [eservas-admin-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for ms-reservas-admin-1 unregistered
+2026-11-18T16:05:04.796-03:00  INFO 278170 --- [ms-reservas] [eservas-admin-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2026-11-18T16:05:04.796-03:00  INFO 278170 --- [ms-reservas] [eservas-admin-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-11-18T16:05:04.797-03:00  INFO 278170 --- [ms-reservas] [eservas-admin-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2026-11-18T16:05:04.847-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [PLAINTEXT://localhost:32787]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = ms-reservas-producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 15000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 5000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2026-11-18T16:05:04.848-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-11-18T16:05:04.865-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=ms-reservas-producer-1] Instantiated an idempotent producer.
+2026-11-18T16:05:04.890-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
+2026-11-18T16:05:04.891-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
+2026-11-18T16:05:04.891-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1795028704890
+2026-11-18T16:05:04.902-03:00  INFO 278170 --- [ms-reservas] [rvas-producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=ms-reservas-producer-1] Cluster ID: extEQ_YCSR2pI8pkBzOueA
+2026-11-18T16:05:05.011-03:00  WARN 278170 --- [ms-reservas] [rvas-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=ms-reservas-producer-1] Error while fetching metadata with correlation id 5 : {mediturno.plomeria=LEADER_NOT_AVAILABLE}
+2026-11-18T16:05:05.014-03:00  INFO 278170 --- [ms-reservas] [rvas-producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=ms-reservas-producer-1] ProducerId set to 0 with epoch 0
+2026-11-18T16:05:05.197-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [PLAINTEXT://localhost:32787]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2026-11-18T16:05:05.198-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-11-18T16:05:05.204-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
+2026-11-18T16:05:05.204-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
+2026-11-18T16:05:05.204-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1795028705204
+2026-11-18T16:05:05.204-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c-2, groupId=plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c] Subscribed to topic(s): mediturno.plomeria
+2026-11-18T16:05:05.212-03:00  INFO 278170 --- [ms-reservas] [           main] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c-2, groupId=plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c] Cluster ID: extEQ_YCSR2pI8pkBzOueA
+2026-11-18T16:05:05.213-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c-2, groupId=plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c] Discovered group coordinator localhost:32787 (id: 2147483646 rack: null)
+2026-11-18T16:05:05.219-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c-2, groupId=plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c] (Re-)joining group
+2026-11-18T16:05:05.224-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c-2, groupId=plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c] Request joining group due to: need to re-join with the given member-id: consumer-plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c-2-11ec2b0a-0cd4-4158-b5c2-8c05a2dd3d20
+2026-11-18T16:05:05.225-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c-2, groupId=plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c] (Re-)joining group
+2026-11-18T16:05:05.229-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c-2, groupId=plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c] Successfully joined group with generation Generation{generationId=1, memberId='consumer-plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c-2-11ec2b0a-0cd4-4158-b5c2-8c05a2dd3d20', protocol='range'}
+2026-11-18T16:05:05.230-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c-2, groupId=plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c] Finished assignment for group at generation 1: {consumer-plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c-2-11ec2b0a-0cd4-4158-b5c2-8c05a2dd3d20=Assignment(partitions=[mediturno.plomeria-0])}
+2026-11-18T16:05:05.236-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c-2, groupId=plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c] Successfully synced group in generation Generation{generationId=1, memberId='consumer-plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c-2-11ec2b0a-0cd4-4158-b5c2-8c05a2dd3d20', protocol='range'}
+2026-11-18T16:05:05.237-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c-2, groupId=plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c] Notifying assignor about the new Assignment(partitions=[mediturno.plomeria-0])
+2026-11-18T16:05:05.237-03:00  INFO 278170 --- [ms-reservas] [           main] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c-2, groupId=plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c] Adding newly assigned partitions: mediturno.plomeria-0
+2026-11-18T16:05:05.240-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c-2, groupId=plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c] Found no committed offset for partition mediturno.plomeria-0
+2026-11-18T16:05:05.248-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c-2, groupId=plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c] Resetting offset for partition mediturno.plomeria-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:32787 (id: 1 rack: null)], epoch=0}}.
+2026-11-18T16:05:05.313-03:00  INFO 278170 --- [ms-reservas] [           main] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c-2, groupId=plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c] Revoke previously assigned partitions mediturno.plomeria-0
+2026-11-18T16:05:05.314-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c-2, groupId=plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c] Member consumer-plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c-2-11ec2b0a-0cd4-4158-b5c2-8c05a2dd3d20 sending LeaveGroup request to coordinator localhost:32787 (id: 2147483646 rack: null) due to the consumer is being closed
+2026-11-18T16:05:05.316-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c-2, groupId=plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c] Resetting generation and member id due to: consumer pro-actively leaving the group
+2026-11-18T16:05:05.316-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c-2, groupId=plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c] Request joining group due to: consumer pro-actively leaving the group
+2026-11-18T16:05:05.771-03:00  INFO 278170 --- [ms-reservas] [           main] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2026-11-18T16:05:05.772-03:00  INFO 278170 --- [ms-reservas] [           main] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-11-18T16:05:05.772-03:00  INFO 278170 --- [ms-reservas] [           main] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2026-11-18T16:05:05.772-03:00  INFO 278170 --- [ms-reservas] [           main] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2026-11-18T16:05:05.778-03:00  INFO 278170 --- [ms-reservas] [           main] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-plomeria-6889bdd9-ce48-4f5c-bf27-92f91f12cf1c-2 unregistered
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.034 s -- in cl.losandes.mediturno.reservas.plomeria.KafkaRespondeIT
+[INFO] Running cl.losandes.mediturno.reservas.plomeria.PostgresRespondeIT
+2026-11-18T16:05:05.790-03:00  INFO 278170 --- [ms-reservas] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [cl.losandes.mediturno.reservas.plomeria.PostgresRespondeIT]: PostgresRespondeIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-18T16:05:05.796-03:00  INFO 278170 --- [ms-reservas] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration cl.losandes.mediturno.reservas.MsReservasApplication for test class cl.losandes.mediturno.reservas.plomeria.PostgresRespondeIT
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.447 s -- in cl.losandes.mediturno.reservas.plomeria.PostgresRespondeIT
+[INFO] Running cl.losandes.mediturno.reservas.plomeria.RedisRespondeIT
+2026-11-18T16:05:06.242-03:00  INFO 278170 --- [ms-reservas] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [cl.losandes.mediturno.reservas.plomeria.RedisRespondeIT]: RedisRespondeIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-18T16:05:06.248-03:00  INFO 278170 --- [ms-reservas] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration cl.losandes.mediturno.reservas.MsReservasApplication for test class cl.losandes.mediturno.reservas.plomeria.RedisRespondeIT
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.839 s -- in cl.losandes.mediturno.reservas.plomeria.RedisRespondeIT
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jacoco:0.8.12:report (reporte) @ ms-reservas ---
+[INFO] Loading execution data file /home/cadel/Escritorio/mediturno/entrega-3/ms-reservas/target/jacoco.exec
+[INFO] Analyzed bundle 'ms-reservas' with 67 classes
+[INFO] 
+[INFO] --- failsafe:3.2.5:verify (default) @ ms-reservas ---
+[INFO] 
+[INFO] --------------< cl.losandes.mediturno:ms-notificaciones >---------------
+[INFO] Building ms-notificaciones 2.1.0                                   [5/6]
+[INFO]   from ms-notificaciones/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ ms-notificaciones ---
+[INFO] Deleting /home/cadel/Escritorio/mediturno/entrega-3/ms-notificaciones/target
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (preparar-agente) @ ms-notificaciones ---
+[INFO] argLine set to -javaagent:/home/cadel/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=/home/cadel/Escritorio/mediturno/entrega-3/ms-notificaciones/target/jacoco.exec
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ ms-notificaciones ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ ms-notificaciones ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 11 source files with javac [debug parameters release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ ms-notificaciones ---
+[INFO] skip non existing resourceDirectory /home/cadel/Escritorio/mediturno/entrega-3/ms-notificaciones/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ ms-notificaciones ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ ms-notificaciones ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ ms-notificaciones ---
+[INFO] Building jar: /home/cadel/Escritorio/mediturno/entrega-3/ms-notificaciones/target/ms-notificaciones-2.1.0.jar
+[INFO] 
+[INFO] --- spring-boot:3.3.4:repackage (repackage) @ ms-notificaciones ---
+[INFO] Replacing main artifact /home/cadel/Escritorio/mediturno/entrega-3/ms-notificaciones/target/ms-notificaciones-2.1.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /home/cadel/Escritorio/mediturno/entrega-3/ms-notificaciones/target/ms-notificaciones-2.1.0.jar.original
+[INFO] 
+[INFO] --- spring-boot:3.3.4:repackage (default) @ ms-notificaciones ---
+[INFO] Replacing main artifact /home/cadel/Escritorio/mediturno/entrega-3/ms-notificaciones/target/ms-notificaciones-2.1.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /home/cadel/Escritorio/mediturno/entrega-3/ms-notificaciones/target/ms-notificaciones-2.1.0.jar.original
+[INFO] 
+[INFO] --- failsafe:3.2.5:integration-test (default) @ ms-notificaciones ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- jacoco:0.8.12:report (reporte) @ ms-notificaciones ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO] 
+[INFO] --- failsafe:3.2.5:verify (default) @ ms-notificaciones ---
+[INFO] 
+[INFO] -------------------< cl.losandes.mediturno:ms-pagos >-------------------
+[INFO] Building ms-pagos 2.1.0                                            [6/6]
+[INFO]   from ms-pagos/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ ms-pagos ---
+[INFO] Deleting /home/cadel/Escritorio/mediturno/entrega-3/ms-pagos/target
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (preparar-agente) @ ms-pagos ---
+[INFO] argLine set to -javaagent:/home/cadel/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=/home/cadel/Escritorio/mediturno/entrega-3/ms-pagos/target/jacoco.exec
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ ms-pagos ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ ms-pagos ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 6 source files with javac [debug parameters release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ ms-pagos ---
+[INFO] skip non existing resourceDirectory /home/cadel/Escritorio/mediturno/entrega-3/ms-pagos/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ ms-pagos ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ ms-pagos ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ ms-pagos ---
+[INFO] Building jar: /home/cadel/Escritorio/mediturno/entrega-3/ms-pagos/target/ms-pagos-2.1.0.jar
+[INFO] 
+[INFO] --- spring-boot:3.3.4:repackage (repackage) @ ms-pagos ---
+[INFO] Replacing main artifact /home/cadel/Escritorio/mediturno/entrega-3/ms-pagos/target/ms-pagos-2.1.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /home/cadel/Escritorio/mediturno/entrega-3/ms-pagos/target/ms-pagos-2.1.0.jar.original
+[INFO] 
+[INFO] --- spring-boot:3.3.4:repackage (default) @ ms-pagos ---
+[INFO] Replacing main artifact /home/cadel/Escritorio/mediturno/entrega-3/ms-pagos/target/ms-pagos-2.1.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /home/cadel/Escritorio/mediturno/entrega-3/ms-pagos/target/ms-pagos-2.1.0.jar.original
+[INFO] 
+[INFO] --- failsafe:3.2.5:integration-test (default) @ ms-pagos ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- jacoco:0.8.12:report (reporte) @ ms-pagos ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO] 
+[INFO] --- failsafe:3.2.5:verify (default) @ ms-pagos ---
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for mediturno-release-2.1 2.1.0:
+[INFO] 
+[INFO] mediturno-release-2.1 .............................. SUCCESS [  0.886 s]
+[INFO] ms-tarificacion .................................... SUCCESS [ 17.213 s]
+[INFO] ms-pacientes ....................................... SUCCESS [01:00 min]
+[INFO] ms-reservas ........................................ SUCCESS [ 48.527 s]
+[INFO] ms-notificaciones .................................. SUCCESS [  0.571 s]
+[INFO] ms-pagos ........................................... SUCCESS [  0.507 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  02:09 min
+[INFO] Finished at: 2026-11-18T16:05:10-03:00
+[INFO] ------------------------------------------------------------------------
